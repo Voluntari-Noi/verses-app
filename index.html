@@ -25,7 +25,7 @@
       var level = 1;
       var experience_points = 0;
       var number_of_levels = 7;
-      var points_per_level = 10;
+      var points_per_level = 3;
 
       function refresh_texts() {
         $("p#info-points span").text(experience_points);
@@ -34,9 +34,14 @@
 
       function update_progress() {
         experience_points += 1;
-        if(experience_points % points_per_level === 0) {
-          level += 1;
-          alert("New level. Yey!");
+        if(experience_points === number_of_levels * points_per_level) {
+          alert("You won the game. Congrats!");
+          $("button#some-experience").hide();
+        } else {
+          if(experience_points % points_per_level === 0) {
+            level += 1;
+            alert("New level. Yey!");
+          }
         }
         refresh_texts();
       }
