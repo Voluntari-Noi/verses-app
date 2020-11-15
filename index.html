@@ -14,7 +14,7 @@
     Lorem ipsum dolor sit amet
   </div>
 
-  <p id="info-level">Level 1</p>
+  <p id="info-level">Level <span>1</span></p>
   <p id="info-points"><span>0</span> points</p>
   <button id="some-experience">Next</button>
 
@@ -24,16 +24,24 @@
     $("document").ready(function() {
       var level = 1;
       var experience_points = 0;
-      var number_of_levels = 10;
+      var number_of_levels = 7;
+      var points_per_level = 10;
 
       function refresh_texts() {
         $("p#info-points span").text(experience_points);
+        $("p#info-level span").text(level);
       }
 
-      $("button#some-experience").on("click", function() {
+      function update_progress() {
         experience_points += 1;
+        if(experience_points % points_per_level === 0) {
+          level += 1;
+          alert("New level. Yey!");
+        }
         refresh_texts();
-      });
+      }
+
+      $("button#some-experience").on("click", update_progress);
     });
   </script>
 </body>
