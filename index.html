@@ -24,14 +24,14 @@
   <script>
     $("document").ready(function() {
       // Init game
-      var current_level = 1;
-      var experience_points = 0;
-      var number_of_levels = 5;
-      var points_per_level = 5;
+      window.current_level = 0;
+      window.experience_points = 0;
+      window.number_of_levels = 5;
+      window.points_per_level = 5;
 
 
       // Definition of exercises types
-      var exercises_types = {
+      window.exercises_types = {
         'ID001': {
           'title': 'Exercise type A',
           'description': 'Solve the exercise bla bla aaaa',
@@ -50,7 +50,7 @@
       }
 
       // Definition of levels
-      var levels = {
+      window.levels = {
         1: {
           'exercises_types': ['ID001']
         },
@@ -86,6 +86,17 @@
         alert("New level. Yey!");
       }
 
+      function new_exercise() {
+        // Start a new exercise
+        if(current_level === 0) {
+          return;  // TODO fix me
+        }
+
+        console.log("New exercise:");
+        var possible_exercises = levels[current_level].exercises_types;
+        console.log(possible_exercises);
+      }
+
       function update_progress(event) {
         var points = 0;
         if(event !== undefined) {
@@ -94,6 +105,7 @@
 
         // Update the experience points, check levels
         experience_points += points;
+        new_exercise();
 
         if(experience_points >= number_of_levels * points_per_level) {
           game_over();
@@ -110,11 +122,6 @@
       function fail() {
         // When there is no progress
         alert("Wrong answer.");
-      }
-
-      function new_exercise() {
-        console.log("New exercise:");
-        debugger;
       }
 
       function start_game(experience_points) {
