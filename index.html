@@ -29,6 +29,45 @@
       var number_of_levels = 5;
       var points_per_level = 5;
 
+
+      // Definition of exercises types
+      var exercises_types = {
+        'ID001': {
+          'title': 'Exercise type A',
+          'description': 'Solve the exercise bla bla aaaa',
+          'points': 3,
+        },
+        'ID002': {
+          'title': 'Exercise type B',
+          'description': 'Solve the exercise bla bla bbbbbbbbbbbbbb',
+          'points': 5,
+        },
+        'ID003': {
+          'title': 'Exercise type C',
+          'description': 'Solve the exercise bla bla cccccccc',
+          'points': 7,
+        },
+      }
+
+      // Definition of levels
+      var levels = {
+        1: {
+          'exercises_types': ['ID001']
+        },
+        2: {
+          'exercises_types': ['ID001', 'ID002']
+        },
+        3: {
+          'exercises_types': ['ID001', 'ID002', 'ID003']
+        },
+        4: {
+          'exercises_types': ['ID003']
+        },
+        5: {
+          'exercises_types': ['ID001', 'ID002', 'ID003']
+        },
+      }
+
       function refresh_texts() {
         // Update experience points and current level
         $("p#info-points span").text(experience_points);
