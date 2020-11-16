@@ -11,7 +11,15 @@
   <h1>App</h1>
 
   <div id="exercise-container">
-    Lorem ipsum dolor sit amet
+    <div id="exercise-info">
+      <p class="exercise-type">Exercise type here</p>
+      <p class="exercise-description">Exercise description here</p>
+      <p class="exercise-points">Points if you succeed</p>
+    </div>
+
+    <div id="exercise-board">
+      TODO implement this for each exercise type
+    </div>
   </div>
 
   <p id="info-level">Level <span>1</span></p>
@@ -99,9 +107,15 @@
 
         console.log("New exercise:");
         var possible_exercises = levels[current_level].exercises_types;
-        var choosen_exercise = random_from_list(possible_exercises);
+        var choosen_exercise_id = random_from_list(possible_exercises);
         console.log(possible_exercises);
-        console.log(choosen_exercise);
+        console.log(choosen_exercise_id);
+
+        var exercise = exercises_types[choosen_exercise_id];
+
+        $("div#exercise-info p.exercise-title").text(exercise.title);
+        $("div#exercise-info p.exercise-description").text(exercise.description);
+        $("div#exercise-info p.exercise-points").text(exercise.points);
       }
 
       function update_progress(event) {
