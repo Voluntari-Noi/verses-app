@@ -39,6 +39,25 @@
     margin-left: 20%;
     padding: 20px;
   }
+
+  p {
+    font-size: 16pt;
+  }
+
+  button {
+    padding: 20px 80px 20px 80px;
+    border: none;
+    color: white;
+    font-size: 20px;
+  }
+
+  button#some-experience {
+    background: green;
+  }
+
+  button#fail {
+    background: red;
+  }
 </style>
 
 <body>
@@ -72,7 +91,7 @@
       window.current_level = 1;
       window.experience_points = 0;
       window.number_of_levels = 5;
-      window.points_per_level = 20;
+      window.points_per_level = 10;
       window.current_exercise_type = 'ID001';
 
 
@@ -91,7 +110,7 @@
         'ID003': {
           'title': 'Puzzle',
           'description': 'Rezolvă puzzle-ul, învață versetul.',
-          'points': 5,
+          'points': 3,
         },
       }
 
