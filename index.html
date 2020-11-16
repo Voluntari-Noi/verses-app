@@ -7,19 +7,46 @@
   <meta name="description" content="Description here">
 </head>
 
+<style>
+  body {
+    background: #DDDDDD;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  div#exercise-container {
+    width: 60%;
+    background: white;
+    margin-left: 20%;
+    padding: 20px;
+  }
+
+  .debug {
+    color: red;
+  }
+
+  div#exercise-board {
+    margin: 20px;
+    background: #333333;
+    padding: 100px;
+  }
+</style>
+
 <body>
   <h1>Versete de memorat</h1>
 
   <div id="exercise-container">
     <div id="exercise-info">
-      <p class="exercise-id">Exercise ID</p>
+      <p class="exercise-id debug">Exercise ID</p>
       <p class="exercise-title">Exercise type here</p>
       <p class="exercise-description">Exercise description here</p>
       <p class="exercise-points">Points if you succeed</p>
     </div>
 
     <div id="exercise-board">
-      TODO implement this for each exercise type
+      <p class="debug">TODO implement this for each exercise type</p>
     </div>
   </div>
 
