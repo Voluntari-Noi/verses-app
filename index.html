@@ -57,22 +57,52 @@
         },
       }
 
+      // Definition of nice messages listed on success
+      window.success_messages = {
+        'M001': 'Bravo!',
+        'M002': 'Uaaaa!',
+        'M003': 'Super. Ai rezolvat corect!',
+        'M004': 'Se vede mult progres. Frumos!',
+        'M005': 'Sunt mândru de tine. Felicitări!',
+        'M006': 'Yeeey! Foarte foarte tare!'
+      }
+
+      // Definition of messages to be listed on fail
+      window.fail_messages = {
+        'F001': 'Ops!',
+        'F002': 'Of... Nu.',
+        'F003': 'Mai încearcă.',
+        'F004': 'Ai greșit...',
+        'F005': 'Hmm. Nu chiar.',
+        'F006': 'Of of of'
+      }
+
       // Definition of levels
       window.levels = {
         1: {
-          'exercises_types': ['ID001']
+          'exercises_types': ['ID001'],
+          'success_messages': ['M001', 'M002'],
+          'fail_messages': ['F001']
         },
         2: {
-          'exercises_types': ['ID001', 'ID002']
+          'exercises_types': ['ID001', 'ID002'],
+          'success_messages': ['M002', 'M003'],
+          'fail_messages': ['F002', 'F003']
         },
         3: {
-          'exercises_types': ['ID001', 'ID002', 'ID003']
+          'exercises_types': ['ID001', 'ID002', 'ID003'],
+          'success_messages': ['M003', 'M004'],
+          'fail_messages': ['F003']
         },
         4: {
-          'exercises_types': ['ID003']
+          'exercises_types': ['ID003'],
+          'success_messages': ['M004', 'M005'],
+          'fail_messages': ['F003', 'F004', 'F005']
         },
         5: {
-          'exercises_types': ['ID001', 'ID002', 'ID003']
+          'exercises_types': ['ID001', 'ID002', 'ID003'],
+          'success_messages': ['M005', 'M006'],
+          'fail_messages': ['F006']
         },
       }
 
