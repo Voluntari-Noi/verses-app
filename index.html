@@ -68,6 +68,11 @@
         },
       }
 
+      function random_from_list(list) {
+        // Return a random item from a list (array) of elements
+        return list[Math.floor(Math.random() * list.length)];
+      }
+
       function refresh_texts() {
         // Update experience points and current level
         $("p#info-points span").text(experience_points);
@@ -94,7 +99,9 @@
 
         console.log("New exercise:");
         var possible_exercises = levels[current_level].exercises_types;
+        var choosen_exercise = random_from_list(possible_exercises);
         console.log(possible_exercises);
+        console.log(choosen_exercise);
       }
 
       function update_progress(event) {
