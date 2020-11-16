@@ -157,9 +157,10 @@
 
       function update_progress() {
         // Update the experience points, check levels
+        var old_points = experience_points;
 
         var points_for_this = exercises_types[current_exercise_type].points;
-        alert("Ai câștigat " + points_for_this + " punct(e)!");
+        console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
         experience_points += points_for_this;
         new_exercise();
@@ -167,7 +168,9 @@
         if(experience_points >= number_of_levels * points_per_level) {
           game_over();
         } else {
-          if(experience_points % points_per_level === 0) {
+          var level_start_at = current_level * points_per_level;
+
+          if(old_points < level_start_at && experience_points >= level_start_at) {
             current_level += 1;
             new_level();
           }
