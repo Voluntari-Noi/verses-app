@@ -33,11 +33,11 @@
   <script>
     $("document").ready(function() {
       // Init game
-      window.current_level = 0;
+      window.current_level = 1;
       window.experience_points = 0;
       window.number_of_levels = 5;
-      window.points_per_level = 5;
-      window.current_exercise_type = 0;
+      window.points_per_level = 20;
+      window.current_exercise_type = 'ID001';
 
 
       // Definition of exercises types
@@ -155,14 +155,13 @@
         console.log(current_exercise_type);
       }
 
-      function update_progress(event) {
-        var points = 0;
-        if(event !== undefined) {
-          points = event.data.points;
-        }
-
+      function update_progress() {
         // Update the experience points, check levels
-        experience_points += points;
+
+        var points_for_this = exercises_types[current_exercise_type].points;
+        alert("Ai câștigat " + points_for_this + " punct(e)!");
+
+        experience_points += points_for_this;
         new_exercise();
 
         if(experience_points >= number_of_levels * points_per_level) {
@@ -195,7 +194,7 @@
       // These are for testing:
 
       // In case of success:
-      $("button#some-experience").on("click", {points: 1}, update_progress);
+      $("button#some-experience").on("click", update_progress);
 
       // In case of fail:
       $("button#fail").on("click", fail);
