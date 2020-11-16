@@ -217,7 +217,10 @@
 
       function fail() {
         // When there is no progress
-        alert("Wrong answer.");
+        var possible_messages = levels[current_level].fail_messages;
+        var choosen_msg_id = random_from_list(possible_messages);
+        var message = fail_messages[choosen_msg_id];
+        alert(message);
       }
 
       function start_game(experience_points) {
