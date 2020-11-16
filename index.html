@@ -87,7 +87,10 @@
       }
 
       function update_progress(event) {
-        var points = event.data.points;
+        var points = 0;
+        if(event !== undefined) {
+          points = event.data.points;
+        }
 
         // Update the experience points, check levels
         experience_points += points;
@@ -108,6 +111,21 @@
         // When there is no progress
         alert("Wrong answer.");
       }
+
+      function new_exercise() {
+        console.log("New exercise:");
+        debugger;
+      }
+
+      function start_game(experience_points) {
+        // Init game starting with user's current experience points
+        update_progress();
+
+        new_exercise();
+      }
+
+      // OK, let's start.
+      start_game(experience_points);
 
       // These are for testing:
 
