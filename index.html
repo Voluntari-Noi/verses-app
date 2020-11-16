@@ -198,6 +198,11 @@
         var points_for_this = exercises_types[current_exercise_type].points;
         console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
+        var possible_messages = levels[current_level].success_messages;
+        var choosen_msg_id = random_from_list(possible_messages);
+        var message = success_messages[choosen_msg_id];
+        alert(message);
+
         experience_points += points_for_this;
         new_exercise();
 
