@@ -113,7 +113,7 @@
       window.number_of_levels = 5;
       window.points_per_level = 10;
       window.current_exercise_type = 'ID001';
-      window.is_logged_in = false;
+      window.is_logged_in = true;
 
 
       // Definition of exercises types
@@ -142,6 +142,7 @@
         'preferences': {
           'exercises_types': ['ID001', 'ID002']
         },
+        'level': 2,
         'experience_points': 30
       }
 
@@ -246,6 +247,8 @@
         var old_points = experience_points;
 
         var points_for_this = exercises_types[current_exercise_type].points;
+        experience_points += points_for_this;
+
         console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
         var possible_messages = levels[current_level].success_messages;
@@ -253,7 +256,6 @@
         var message = success_messages[choosen_msg_id];
         alert(message);
 
-        experience_points += points_for_this;
         new_exercise();
 
         if(experience_points >= number_of_levels * points_per_level) {
@@ -288,6 +290,10 @@
       function load_profile() {
         // Load logged in profile
         experience_points = user_profile.experience_points;
+        current_level = user_profile.level;
+
+        var nickname = user_profile.nickname;
+        var photo = user_profile.photo;
       }
 
       // OK, let's start.
