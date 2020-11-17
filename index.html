@@ -114,6 +114,17 @@
         },
       }
 
+      // Simulate a user profile
+      window.is_logged_in = true;
+      window.user_profile = {
+        'nickname': 'Albert E.',
+        'photo': './images/albert_e.png'
+        'preferences': {
+          'exercises_types': ['ID001', 'ID002']
+        },
+        'experience_points': 30
+      }
+
       // Definition of nice messages listed on success
       window.success_messages = {
         'M001': 'Bravo!',
@@ -254,7 +265,15 @@
         new_exercise();
       }
 
+      function load_profile() {
+        debugger;
+      }
+
       // OK, let's start.
+      if(is_logged_in) {
+        load_profile();
+      }
+
       start_game(experience_points);
 
       // These are for testing:
