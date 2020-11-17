@@ -40,6 +40,7 @@
 
   .debug {
     color: red;
+    font-size: 10pt;
   }
 
   div#exercise-board {
@@ -88,9 +89,10 @@
   <div id="exercise-container">
     <div id="exercise-info">
       <p class="exercise-id debug">Exercise ID</p>
+      <p id="info-consecutive-successes" class="debug">Consecutive succeses: <span>0</span></p>
       <p class="exercise-title">Exercise type here</p>
       <p class="exercise-description">Exercise description here</p>
-      <p class="exercise-points debug">Points if you succeed</p>
+      <p class="exercise-points debug">Points if you succeed: <span>0</span></p>
     </div>
 
     <div id="exercise-board">
@@ -114,6 +116,7 @@
       window.points_per_level = 10;
       window.current_exercise_type = 'ID001';
       window.is_logged_in = true;
+      window.consecutive_successes = 0;
 
 
       // Definition of exercises types
@@ -204,6 +207,7 @@
         // Update experience points and current level
         $("p#info-points span").text(window.experience_points);
         $("p#info-level span").text(window.current_level);
+        $("p#info-consecutive-successes span").text(window.consecutive_successes);
       }
 
       function game_over() {
@@ -237,7 +241,7 @@
         $("div#exercise-info p.exercise-id").text(choosen_exercise_id);
         $("div#exercise-info p.exercise-title").text(exercise.title);
         $("div#exercise-info p.exercise-description").text(exercise.description);
-        $("div#exercise-info p.exercise-points").text(exercise.points);
+        $("div#exercise-info p.exercise-points span").text(exercise.points);
 
         console.log(window.current_exercise_type);
       }
@@ -255,6 +259,7 @@
         var choosen_msg_id = random_from_list(possible_messages);
         var message = success_messages[choosen_msg_id];
         alert(message);
+        window.consecutive_successes += 1;
 
         new_exercise();
 
@@ -282,6 +287,8 @@
         var possible_messages = levels[window.current_level].fail_messages;
         var choosen_msg_id = random_from_list(possible_messages);
         var message = fail_messages[choosen_msg_id];
+        window.consecutive_successes = 0;
+        refresh_texts();
         alert(message);
       }
 
