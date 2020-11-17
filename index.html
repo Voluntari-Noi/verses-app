@@ -143,7 +143,7 @@
           'exercises_types': ['ID001', 'ID002']
         },
         'level': 2,
-        'experience_points': 30
+        'experience_points': 21
       }
 
       // Definition of nice messages listed on success
@@ -202,8 +202,8 @@
 
       function refresh_texts() {
         // Update experience points and current level
-        $("p#info-points span").text(experience_points);
-        $("p#info-level span").text(current_level);
+        $("p#info-points span").text(window.experience_points);
+        $("p#info-level span").text(window.current_level);
       }
 
       function game_over() {
@@ -220,51 +220,51 @@
 
       function new_exercise() {
         // Start a new exercise
-        if(current_level === 0) {
+        if(window.current_level === 0) {
           return;  // TODO fix me
         }
 
         console.log("New exercise:");
-        var possible_exercises = levels[current_level].exercises_types;
+        var possible_exercises = levels[window.current_level].exercises_types;
         var choosen_exercise_id = random_from_list(possible_exercises);
         console.log(possible_exercises);
         console.log(choosen_exercise_id);
 
         var exercise = exercises_types[choosen_exercise_id];
 
-        current_exercise_type = choosen_exercise_id;
+        window.current_exercise_type = choosen_exercise_id;
 
         $("div#exercise-info p.exercise-id").text(choosen_exercise_id);
         $("div#exercise-info p.exercise-title").text(exercise.title);
         $("div#exercise-info p.exercise-description").text(exercise.description);
         $("div#exercise-info p.exercise-points").text(exercise.points);
 
-        console.log(current_exercise_type);
+        console.log(window.current_exercise_type);
       }
 
       function update_progress() {
         // Update the experience points, check levels
-        var old_points = experience_points;
+        var old_points = window.experience_points;
 
-        var points_for_this = exercises_types[current_exercise_type].points;
-        experience_points += points_for_this;
+        var points_for_this = exercises_types[window.current_exercise_type].points;
+        window.experience_points += points_for_this;
 
         console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
-        var possible_messages = levels[current_level].success_messages;
+        var possible_messages = levels[window.current_level].success_messages;
         var choosen_msg_id = random_from_list(possible_messages);
         var message = success_messages[choosen_msg_id];
         alert(message);
 
         new_exercise();
 
-        if(experience_points >= number_of_levels * points_per_level) {
+        if(window.experience_points >= window.number_of_levels * window.points_per_level) {
           game_over();
         } else {
-          var level_start_at = current_level * points_per_level;
+          var level_start_at = window.current_level * window.points_per_level;
 
-          if(old_points < level_start_at && experience_points >= level_start_at) {
-            current_level += 1;
+          if(old_points < level_start_at && window.experience_points >= level_start_at) {
+            window.current_level += 1;
             new_level();
           }
         }
@@ -274,13 +274,13 @@
 
       function fail() {
         // When there is no progress
-        var possible_messages = levels[current_level].fail_messages;
+        var possible_messages = levels[window.current_level].fail_messages;
         var choosen_msg_id = random_from_list(possible_messages);
         var message = fail_messages[choosen_msg_id];
         alert(message);
       }
 
-      function start_game(experience_points) {
+      function start_game() {
         // Init game starting with user's current experience points
         update_progress();
 
@@ -289,19 +289,21 @@
 
       function load_profile() {
         // Load logged in profile
-        experience_points = user_profile.experience_points;
-        current_level = user_profile.level;
+        window.experience_points = user_profile.experience_points;
+        window.current_level = user_profile.level;
 
         var nickname = user_profile.nickname;
         var photo = user_profile.photo;
+
+        $("p#info-nickname span").text(nickname);
       }
 
       // OK, let's start.
-      if(is_logged_in) {
+      if(window.is_logged_in) {
         load_profile();
       }
 
-      start_game(experience_points);
+      start_game();
 
       // These are for testing:
 
