@@ -16,6 +16,21 @@
     text-align: center;
   }
 
+  div#profile-container {
+    width: 60%;
+    background: #AAAAAA;
+    margin-left: 20%;
+    padding: 0 20px 0 20px;
+    color: white;
+    overflow: auto;
+  }
+
+  div#profile-container p {
+    float: left;
+    width: 33%;
+    text-align: center;
+  }
+
   div#exercise-container {
     width: 60%;
     background: white;
@@ -53,6 +68,7 @@
 
   button#some-experience {
     background: green;
+    float: right;
   }
 
   button#fail {
@@ -62,6 +78,12 @@
 
 <body>
   <h1>Versete de memorat</h1>
+
+  <div id="profile-container">
+    <p id="info-nickname"><span>Anonim</span></p>
+    <p id="info-level">Level <span>1</span></p>
+    <p id="info-points"><span>0</span> points</p>
+  </div>
 
   <div id="exercise-container">
     <div id="exercise-info">
@@ -77,8 +99,6 @@
   </div>
 
   <div id="exercise-controls">
-    <p id="info-level">Level <span>1</span></p>
-    <p id="info-points"><span>0</span> points</p>
     <button id="fail">Fail</button>
     <button id="some-experience">Success</button>
   </div>
@@ -93,6 +113,7 @@
       window.number_of_levels = 5;
       window.points_per_level = 10;
       window.current_exercise_type = 'ID001';
+      window.is_logged_in = false;
 
 
       // Definition of exercises types
@@ -115,10 +136,9 @@
       }
 
       // Simulate a user profile
-      window.is_logged_in = true;
       window.user_profile = {
         'nickname': 'Albert E.',
-        'photo': './images/albert_e.png'
+        'photo': './images/albert_e.png',
         'preferences': {
           'exercises_types': ['ID001', 'ID002']
         },
@@ -266,7 +286,8 @@
       }
 
       function load_profile() {
-        debugger;
+        // Load logged in profile
+        experience_points = user_profile.experience_points;
       }
 
       // OK, let's start.
