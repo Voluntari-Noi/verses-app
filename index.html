@@ -261,6 +261,10 @@
         alert(message);
         window.consecutive_successes += 1;
 
+        if(window.consecutive_successes % 5 == 0) {
+          alert("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
+        }
+
         new_exercise();
 
         if(window.experience_points >= window.number_of_levels * window.points_per_level) {
