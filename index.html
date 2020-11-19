@@ -117,7 +117,12 @@
       window.current_exercise_type = 'ID001';
       window.is_logged_in = true;
       window.consecutive_successes = 0;
-
+      window.texts = [
+        "Aaaa Aaaaa aaaa",
+        "Bbbbb bbbbb bbbb",
+        "Ccccc cccc cccc"
+      ];
+      window.current_text = "aaa";
 
       // Definition of exercises types
       window.exercises_types = {
@@ -222,6 +227,10 @@
         alert("New level. Yey!");
       }
 
+      $.fn.demo_plugin = function() {
+        this.text("DEMO PLUGIN LOADED:" + window.current_text);
+      };
+
       function new_exercise() {
         // Start a new exercise
         if(window.current_level === 0) {
@@ -246,6 +255,8 @@
         // cerem plugin-ul corespunzator cu exercitiul
         // window.current_verse
         // TODO implement plugin ID000 - template
+        window.current_text = random_from_list(window.texts);
+        $("div#exercise-board").demo_plugin();
 
         console.log(window.current_exercise_type);
       }
