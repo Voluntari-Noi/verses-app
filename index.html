@@ -229,6 +229,10 @@
 
       $.fn.demo_plugin = function() {
         this.text("DEMO PLUGIN LOADED:" + window.current_text);
+        this.append("<button class='done'>Done</button>");
+        $("button.done").on("click", function() {
+          $(document).trigger("exercise_success_event", ["bim", "baz"]);
+        });
       };
 
       function new_exercise() {
@@ -333,6 +337,15 @@
       if(window.is_logged_in) {
         load_profile();
       }
+
+      $(document).on("exercise_success_event", {
+        foo: "bar"
+      }, function( event, arg1, arg2 ) {
+        console.log( event.data.foo ); // "bar"
+        console.log( arg1 );           // "bim"
+        console.log( arg2 );           // "baz"
+        console.log("YEEEY");
+      });
 
       start_game();
 
