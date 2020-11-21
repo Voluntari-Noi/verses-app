@@ -232,7 +232,7 @@
         this.text("DEMO PLUGIN LOADED:" + window.current_text);
         this.append("<button class='done'>Done</button>");
         $("button.done").on("click", function() {
-          $(document).trigger("exercise_success_event", ["bim", "baz"]);
+          $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
         });
       };
 
