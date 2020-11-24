@@ -128,16 +128,19 @@
       // Definition of exercises types
       window.exercises_types = {
         'ID001': {
+          'plugin_name': 'demo_plugin1',
           'title': 'Cuvinte lipsă',
           'description': 'Mută cuvintele la locul potrivit.',
           'points': 1,
         },
         'ID002': {
+          'plugin_name': 'demo_plugin2',
           'title': 'Toate cuvintele',
           'description': 'Aranjează cuvintele în ordinea potrivită, descoperă versetul.',
           'points': 2,
         },
         'ID003': {
+          'plugin_name': 'demo_plugin3',
           'title': 'Puzzle',
           'description': 'Rezolvă puzzle-ul, învață versetul.',
           'points': 3,
@@ -228,8 +231,24 @@
         alert("New level. Yey!");
       }
 
-      $.fn.demo_plugin = function() {
-        this.text("DEMO PLUGIN LOADED:" + window.current_text);
+      $.fn.demo_plugin1 = function() {
+        this.text("DEMO PLUGIN 1 LOADED:" + window.current_text);
+        this.append("<button class='done'>Done</button>");
+        $("button.done").on("click", function() {
+          $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
+        });
+      };
+
+      $.fn.demo_plugin2 = function() {
+        this.text("DEMO PLUGIN 2 LOADED:" + window.current_text);
+        this.append("<button class='done'>Done</button>");
+        $("button.done").on("click", function() {
+          $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
+        });
+      };
+
+      $.fn.demo_plugin3 = function() {
+        this.text("DEMO PLUGIN 3 LOADED:" + window.current_text);
         this.append("<button class='done'>Done</button>");
         $("button.done").on("click", function() {
           $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
@@ -257,11 +276,14 @@
         $("div#exercise-info p.exercise-description").text(exercise.description);
         $("div#exercise-info p.exercise-points span").text(exercise.points);
 
+        var plugin_name = exercise.plugin_name;
+        console.log("Plugin: " + plugin_name);
+
         // cerem plugin-ul corespunzator cu exercitiul
         // window.current_verse
         // TODO implement plugin ID000 - template
         window.current_text = random_from_list(window.texts);
-        $("div#exercise-board").demo_plugin();
+        $("div#exercise-board")[plugin_name]();
 
         console.log(window.current_exercise_type);
       }
