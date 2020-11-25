@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
 
@@ -46,7 +47,7 @@
   div#exercise-board {
     margin: 20px 0 20px 0;
     background: #AAAAAA;
-    padding: 100px;
+    padding: 50px;
   }
 
   div#exercise-controls {
@@ -106,10 +107,11 @@
     <button id="some-experience">Success</button>
   </div>
 
-  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 
   <script>
-    $("document").ready(function() {
+    $("document").ready(function () {
       // Init game
       window.current_level = 1;
       window.experience_points = 0;
@@ -118,10 +120,12 @@
       window.current_exercise_type = 'ID001';
       window.is_logged_in = true;
       window.consecutive_successes = 0;
+      window.allBooks = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmi', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
       window.texts = [
-        "Aaaa Aaaaa aaaa",
-        "Bbbbb bbbbb bbbb",
-        "Ccccc cccc cccc"
+        "Aaaa Aaaaa aaaa (1 Ioan 1:1)",
+        "Bbbbb bbbbb bbbb (1 Ioan 2:1)",
+        "Ccccc cccc cccc (Ioan 3:1)",
+        "Ccccc cccc cccc (1 Ioan 3:1)"
       ];
       window.current_text = "aaa";
 
@@ -143,6 +147,12 @@
           'plugin_name': 'demo_plugin3',
           'title': 'Puzzle',
           'description': 'Rezolvă puzzle-ul, învață versetul.',
+          'points': 3,
+        },
+        'ID004': {
+          'plugin_name': 'demo_plugin4',
+          'title': 'Referinta lipsa',
+          'description': 'Introdu referinta pentru acest verset.',
           'points': 3,
         },
       }
@@ -186,17 +196,17 @@
           'fail_messages': ['F001']
         },
         2: {
-          'exercises_types': ['ID001', 'ID002'],
+          'exercises_types': ['ID001', 'ID002', 'ID004'],
           'success_messages': ['M002', 'M003'],
           'fail_messages': ['F002', 'F003']
         },
         3: {
-          'exercises_types': ['ID001', 'ID002', 'ID003'],
+          'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
           'success_messages': ['M003', 'M004'],
           'fail_messages': ['F003']
         },
         4: {
-          'exercises_types': ['ID003'],
+          'exercises_types': ['ID003', 'ID004'],
           'success_messages': ['M004', 'M005'],
           'fail_messages': ['F003', 'F004', 'F005']
         },
@@ -231,33 +241,64 @@
         alert("New level. Yey!");
       }
 
-      $.fn.demo_plugin1 = function() {
+      $.fn.demo_plugin1 = function () {
         this.text("DEMO PLUGIN 1 LOADED:" + window.current_text);
         this.append("<button class='done'>Done</button>");
-        $("button.done").on("click", function() {
+        $("button.done").on("click", function () {
           $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
         });
       };
 
-      $.fn.demo_plugin2 = function() {
+      $.fn.demo_plugin2 = function () {
         this.text("DEMO PLUGIN 2 LOADED:" + window.current_text);
         this.append("<button class='done'>Done</button>");
-        $("button.done").on("click", function() {
+        $("button.done").on("click", function () {
           $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
         });
       };
 
-      $.fn.demo_plugin3 = function() {
+      $.fn.demo_plugin3 = function () {
         this.text("DEMO PLUGIN 3 LOADED:" + window.current_text);
         this.append("<button class='done'>Done</button>");
-        $("button.done").on("click", function() {
+        $("button.done").on("click", function () {
           $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
+        });
+      };
+      $.fn.demo_plugin4 = function () {
+        //Introdu referinta pentru acest verset
+        this.empty();
+        var wholeText = window.current_text;
+        var verse = "";
+        var reference = "";
+        var lIndexOfParenthesis = wholeText.lastIndexOf("(");
+        if (lIndexOfParenthesis > 0) {
+          verse = wholeText.substring(0, lIndexOfParenthesis);
+          reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
+        };
+        this.append('<p style="background-color:white;padding:15px;" class="dp4_displayed_verse">' + window.current_text + "</p>");
+        var selectHtml = '<select class="dp4_carte">';
+        window.allBooks.forEach(element => {
+          selectHtml += '<option value="' + element + '">' + element + '</option>';
+        });
+        this.append(selectHtml + "</select>");
+        this.append(" ");
+        this.append('<input class="dp4_capitol" style="width:30px" />');
+        this.append(' : ');
+        this.append('<input class="dp4_versete"  style="width:35px"/><br/><br/>');
+        this.append("<button class='dp4_done'>Done</button>");
+        $("button.dp4_done").on("click", function () {
+          var userReference = $(".dp4_carte").val() + " " + $(".dp4_capitol").val() + ":" + $(".dp4_versete").val();
+          if (userReference.toLowerCase() == reference.toLowerCase()) {
+            $(document).trigger("exercise_success_event", ["SUCCESS"]);  // TODO: status? (fail/success) extra points?
+          } else {
+            $(document).trigger("exercise_success_event", ["FAIL"]);
+          }
         });
       };
 
       function new_exercise() {
         // Start a new exercise
-        if(window.current_level === 0) {
+        if (window.current_level === 0) {
           return;  // TODO fix me
         }
 
@@ -303,23 +344,23 @@
         alert(message);
         window.consecutive_successes += 1;
 
-        if(window.consecutive_successes % 5 == 0) {
+        if (window.consecutive_successes % 5 == 0) {
           alert("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
         }
 
         new_exercise();
 
-        if(window.experience_points >= window.number_of_levels * window.points_per_level) {
+        if (window.experience_points >= window.number_of_levels * window.points_per_level) {
           game_over();
         } else {
           var level_start_at = window.current_level * window.points_per_level;
-          if(experience_points > level_start_at) {
+          if (experience_points > level_start_at) {
             // fix possible issue on loading profile:
             level_start_at = (window.current_level + 1) * window.points_per_level;
           }
 
           console.log("Old:" + old_points + " Level start at: " + level_start_at + " Experience points: " + window.experience_points);
-          if(old_points < level_start_at && window.experience_points >= level_start_at) {
+          if (old_points < level_start_at && window.experience_points >= level_start_at) {
             window.current_level += 1;
             new_level();
           }
@@ -357,21 +398,21 @@
       }
 
       // OK, let's start.
-      if(window.is_logged_in) {
+      if (window.is_logged_in) {
         load_profile();
       }
 
       $(document).on("exercise_success_event", {
         foo: "bar"
-      }, function( event, arg1, arg2 ) {
-        console.log( event.data.foo ); // "bar"
-        console.log( arg1 );           // "bim"
-        console.log( arg2 );           // "baz"
+      }, function (event, arg1, arg2) {
+        console.log(event.data.foo); // "bar"
+        console.log(arg1);           // "bim"
+        console.log(arg2);           // "baz"
         console.log("YEEEY");
         update_progress();
       });
 
-      start_game();
+      start_game(); 
 
       // These are for testing:
 
@@ -383,4 +424,5 @@
     });
   </script>
 </body>
+
 </html>
