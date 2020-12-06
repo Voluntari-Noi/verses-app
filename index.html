@@ -118,7 +118,7 @@
       window.number_of_levels = 5;
       window.points_per_level = 10;
       window.current_exercise_type = 'ID001';
-      window.is_logged_in = true;
+      window.is_logged_in = false;
       window.consecutive_successes = 0;
       window.allBooks = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmi', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
       window.texts = [
@@ -132,7 +132,7 @@
       // Definition of exercises types
       window.exercises_types = {
         'ID001': {
-          'plugin_name': 'demo_plugin1',
+          'plugin_name': 'blank_words',
           'title': 'Cuvinte lipsă',
           'description': 'Mută cuvintele la locul potrivit.',
           'points': 1,
@@ -240,6 +240,103 @@
         // New level
         alert("New level. Yey!");
       }
+
+      $.fn.blank_words = function () {
+        function show_verse() {
+          $(".blank-words-right").html("");
+          $(".blank-words-left").html("");
+          var reg = /([^[]+(?=]))/g;
+          var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
+          var text_hidden = text_definition.match(reg);  // Extract the list of hidden words
+
+          var $HTML_WIP = "<div class='text-with-blank'><p>***</p></div>";
+          var $HTML_WIP2 = "<span class='blank'>__________</span>";
+          var $text_def = text_definition.replace(/\[(.+?)\]/g, $HTML_WIP2);
+          var $HTML_WIP3 = $HTML_WIP.split("***").join($text_def);
+          var $HTML_to_display2 = $HTML_WIP3;
+
+          shuffle(text_hidden);
+
+          var $HTML_to_display = $("div.text-with-blank");
+          $HTML_to_display.find("span").replaceWith(function () { return "<div class='blank'>__________</div>"; });
+          $(".blank-words-left").html($HTML_to_display2);
+
+          for (var index in text_hidden) {
+            var $new_word = $("<div>").addClass("word").html(text_hidden[index]);
+            $(".blank-words-right").append($new_word);
+          }
+
+          var number_words_to_drop = 0;
+          var alerted_fail = false;
+
+          $(".word").draggable({ revert: true, cursor: "pointer", containment: ".blank-words-test" });
+          $(".blank-words-right").droppable({
+            drop: function (ev, ui) {
+              $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+              $(ui.draggable).removeClass('dropped');
+
+              $(".blank").each(function () {
+                if ($(this).html() == "") {
+                  $(this).text("__________");
+                  $(this).droppable('enable');
+                }
+              });
+            }
+          });
+
+          $(".blank").droppable({
+            drop: function (ev, ui) {
+              $(this).text("");
+
+              $(ui.draggable).detach().css({ top: 0, left: 0 }).appendTo(this);
+              $(ui.draggable).addClass('dropped');
+
+              number_words_to_drop = $(".blank-words-right div.word:not(.dropped)").length;
+
+              $(this).droppable('disable');
+
+              $(".blank").each(function () {
+                if ($(this).html() == "") {
+                  $(this).text("__________");
+                  $(this).droppable('enable');
+                }
+              });
+
+              if (number_words_to_drop == 0) {
+                var text_tried = $("div.blank-words-left p").text();
+                console.log(text_definition);
+                var tdHash = getHashCode(text_definition);
+                var usage = parseInt(getUsage(text_definition)) + 1;
+                localStorage.setItem(tdHash, usage);
+                localStorage.setItem("last-verse", tdHash);
+                if (text_tried == text_correct) {
+                  $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
+                  swal("Felicitări! ", "Ai învățat un verset!", "success");
+                  $(".word").css("pointer-events", "none");
+                } else {
+                  if (alerted_fail == false) {
+                    swal("Ai greșit!", "Încearcă din nou.", "error");
+                  }
+
+                  setTimeout(function () {
+                    $(".word").appendTo('.blank-words-right');
+                    $(".word").removeClass('dropped');
+
+                    $(".blank").each(function () {
+                      if ($(this).html() == "") {
+                        $(this).text("__________");
+                        $(this).droppable('enable');
+                      }
+                    });
+                  }, 3000);
+                }
+              }
+            }
+          });
+        }
+
+        showVerse(window.current_verse);
+      };
 
       $.fn.demo_plugin1 = function () {
         this.text("DEMO PLUGIN 1 LOADED:" + window.current_text);
