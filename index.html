@@ -77,6 +77,51 @@
     color: white;
     font-size: 20px;
   }
+
+  .word, .blank, .blank-words-right, .sorting-test-items {
+    border-radius: 10px;
+    font-size: 13pt;
+  }
+
+  .blank-words-test {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: inline-block;
+    position: relative;
+    height: 100%;
+    width: 100%;
+  }
+
+  .word {
+    float: left;
+    padding: 0.2em;
+    margin: 2px 2px 2px 2px;
+    background: white;
+  }
+
+  .blank {
+    display: inline;
+    width: 150px;
+    background: #f5f5f5;
+    padding: 4px;
+  }
+
+  .blank-words-left {
+    width: 100%;
+    background: #E4E4E4;
+    float: left;
+    font-size: 13pt;
+  }
+
+  .blank-words-right {
+    width: 100%;
+    background: #D9D9D9;
+    padding: 10px 10px 10px 10px;
+    float: right;
+  }
+
 </style>
 
 <body>
@@ -258,6 +303,7 @@
 
       $.fn.blank_words = function () {
         function show_verse() {
+          $("div#exercise-board").html("<div class='blank-words-left'></div><div class='blank-words-right'></div>")
           $(".blank-words-right").html("");
           $(".blank-words-left").html("");
           var reg = /([^[]+(?=]))/g;
@@ -321,17 +367,15 @@
               if (number_words_to_drop == 0) {
                 var text_tried = $("div.blank-words-left p").text();
                 console.log(text_definition);
-                var tdHash = getHashCode(text_definition);
-                var usage = parseInt(getUsage(text_definition)) + 1;
-                localStorage.setItem(tdHash, usage);
-                localStorage.setItem("last-verse", tdHash);
                 if (text_tried == text_correct) {
                   $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
-                  swal("Felicitări! ", "Ai învățat un verset!", "success");
+                  <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
+                  alert("Gresit");
                   $(".word").css("pointer-events", "none");
                 } else {
                   if (alerted_fail == false) {
-                    swal("Ai greșit!", "Încearcă din nou.", "error");
+                    <!-- swal("Ai greșit!", "Încearcă din nou.", "error"); -->
+                    alert("Corect");
                   }
 
                   setTimeout(function () {
