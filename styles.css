@@ -36,7 +36,7 @@ div#exercise-container {
 div#exercise-board {
   margin: 20px 0 20px 0;
   background: #AAAAAA;
-  padding: 50px;
+  padding: 0px;
 }
 
 div#exercise-controls {
@@ -88,6 +88,11 @@ button#fail {
   padding: 0.2em;
   margin: 2px 2px 2px 2px;
   background: white;
+}
+
+.dropped {
+  display: inline;
+  float: inherit;
 }
 
 .blank {

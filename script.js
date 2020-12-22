@@ -143,7 +143,7 @@
 
     $.fn.blank_words = function () {
       function show_verse() {
-        $("div#exercise-board").html("<div class='blank-words-left'></div><div class='blank-words-right'></div>")
+        $("div#exercise-board").html("<div class='blank-words-test'><div class='blank-words-left'></div><div class='blank-words-right'></div></div>")
         $(".blank-words-right").html("");
         $(".blank-words-left").html("");
         var reg = /([^[]+(?=]))/g;
