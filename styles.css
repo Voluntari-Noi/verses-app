@@ -67,7 +67,7 @@ button#fail {
   font-size: 20px;
 }
 
-.word, .blank, .blank-words-right, .sorting-test-items {
+.word, .blank, .sorting-test-items {
   border-radius: 10px;
   font-size: 13pt;
 }
@@ -110,7 +110,7 @@ button#fail {
 }
 
 .blank-words-right {
-  width: 100%;
+  width: calc(100% - 20px);
   background: #D9D9D9;
   padding: 10px 10px 10px 10px;
   float: right;
