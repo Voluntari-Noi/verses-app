@@ -104,6 +104,10 @@
       },
     }
 
+    function clear_board() {
+      $("div#exercise-board").html("");
+    }
+
     function shuffle(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -211,6 +215,7 @@
                 $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
                 <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
                 alert("Corect");
+                clear_board();
                 $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
                 $(".word").css("pointer-events", "none");
               } else {
