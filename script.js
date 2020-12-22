@@ -105,7 +105,13 @@
     }
 
     function clear_board() {
+      // Clear the board. Usually when an exercise is done.
       $("div#exercise-board").html("");
+    }
+
+    function only_letters(str) {
+      // Check if a given string have only letters
+      return str.match("^[a-zA-Z]+$");
     }
 
     function shuffle(array) {
@@ -151,7 +157,16 @@
         $(".blank-words-right").html("");
         $(".blank-words-left").html("");
         var reg = /([^[]+(?=]))/g;
-        var text_definition = "Lorem [ipsum] dolor [sit] [amet].";
+        var split_text = window.current_text.split(/([_\W])/);
+        var text_definition = "";
+        split_text.forEach(element => {
+          if(only_letters(element)) {
+            text_definition = text_definition + "[" + element + "]";
+          } else {
+            text_definition += element;
+          }
+        });
+        // var text_definition = "Lorem [ipsum] dolor [sit] [amet].";
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
         var text_hidden = text_definition.match(reg);  // Extract the list of hidden words
 
@@ -234,7 +249,7 @@
                       $(this).droppable('enable');
                     }
                   });
-                }, 3000);
+                }, 1000);
               }
             }
           }
