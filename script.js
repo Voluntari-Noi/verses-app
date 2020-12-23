@@ -163,7 +163,7 @@
     $.fn.blank_words = function () {
       function ok_to_hide(word) {
         // decide if the given word is ok to be a hidden one
-        var min_word_length = 3;
+        var min_word_length = 5;
         if(only_letters(word)) {
           if(word.length > min_word_length) {
             return true;
