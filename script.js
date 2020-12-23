@@ -232,7 +232,7 @@
                 alert("Corect");
                 clear_board();
                 $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
-                $(".word").css("pointer-events", "none");
+                // $(".word").css("pointer-events", "none");
               } else {
                 if (alerted_fail == false) {
                   <!-- swal("Ai greșit!", "Încearcă din nou.", "error"); -->
