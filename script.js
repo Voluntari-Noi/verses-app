@@ -177,8 +177,6 @@
         });
         text_definition = text_definition.split("][").join("");  // fix wrong split
 
-        console.log(text_definition);
-        // var text_definition = "Lorem [ipsum] dolor [sit] [amet].";
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
         var text_hidden = text_definition.match(reg);  // Extract the list of hidden words
 
