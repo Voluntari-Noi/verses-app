@@ -37,7 +37,7 @@
         'points': 3,
       },
       'ID004': {
-        'plugin_name': 'demo_plugin4',
+        'plugin_name': 'fill_reference',
         'title': 'Referinta lipsa',
         'description': 'Introdu referinta pentru acest verset.',
         'points': 3,
@@ -283,8 +283,8 @@
       });
     };
 
-    $.fn.demo_plugin4 = function () {
-      //Introdu referinta pentru acest verset
+    $.fn.fill_reference = function () {
+      // Fill the reference for a given text
       this.empty();
       var wholeText = window.current_text;
       var verse = "";
