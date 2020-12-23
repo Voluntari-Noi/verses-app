@@ -261,6 +261,7 @@
                 if (alerted_fail == false) {
                   <!-- swal("Ai greșit!", "Încearcă din nou.", "error"); -->
                   alert("Gresit");
+                  $(document).trigger("exercise_fail_event", ["FAIL"]);
                 }
 
                 setTimeout(function () {
@@ -453,6 +454,16 @@
       console.log(arg2);           // "baz"
       console.log("YEEEY");
       update_progress();
+    });
+
+    $(document).on("exercise_fail_event", {
+      foo: "bar"
+    }, function (event, arg1, arg2) {
+      console.log(event.data.foo); // "bar"
+      console.log(arg1);           // "bim"
+      console.log(arg2);           // "baz"
+      console.log("FAIL");
+      fail();
     });
 
     start_game();
