@@ -161,22 +161,34 @@
     }
 
     $.fn.blank_words = function () {
+      function ok_to_hide(word) {
+        // decide if the given word is ok to be a hidden one
+        var min_word_length = 3;
+        if(only_letters(word)) {
+          if(word.length > min_word_length) {
+            return true;
+          }
+        }
+
+        return false;
+      }
+
       function show_verse() {
         $("div#exercise-board").html("<div class='blank-words-test'><div class='blank-words-left'></div><div class='blank-words-right'></div></div>")
         $(".blank-words-right").html("");
         $(".blank-words-left").html("");
         var reg = /([^[]+(?=]))/g;
-        var split_text = window.current_text.split(/([_\W])/);
+
+        var split_text = window.current_text.match(/[a-zășțâî]+|[^a-zășțâî]+/gi)
+
         var text_definition = "";
         split_text.forEach(element => {
-          if(only_letters(element)) {
+          if(ok_to_hide(element)) {
             text_definition = text_definition + "[" + element + "]";
           } else {
             text_definition += element;
           }
         });
-        text_definition = text_definition.split("][").join("");  // fix wrong split
-        text_definition = text_definition.split("]-[").join("-");  // fix wrong split
 
         console.log(text_definition);
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
