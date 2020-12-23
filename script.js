@@ -9,11 +9,20 @@
     window.consecutive_successes = 0;
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmi', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
     window.texts = [
-      "Aaaa Aaaaa aaaa (1 Ioan 1:1)",
-      "Bbbbb bbbbb bbbb (1 Ioan 2:1)",
-      "Ccccc cccc cccc (Ioan 3:1)",
-      "Ccccc cccc cccc (1 Ioan 3:1)"
+      "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea. (Psalmii 119:105)",
+      "Să ascultăm, dar, încheierea tuturor învățăturilor: Teme-te de Dumnezeu și păzește poruncile Lui. Aceasta este datoria oricărui om. (Eclesiast 12:13)",
+      "Omul socotește că toate căile lui sunt fără prihană, dar Cel ce cercetează inimile este Domnul. (Proverbe 21:2)",
+      "Puii de leu duc lipsă și li-e foame, dar cei ce caută pe Domnul nu duc lipsă de niciun bine. (Psalmii 34:10)",
+      "Domnul va sfârși ce a început pentru mine. Doamne, bunătatea Ta ține în veci: nu părăsi lucrările mâinilor Tale. (Psalmii 138:8)",
+      "Împrietenește-te dar cu Dumnezeu și vei avea pace; te vei bucura astfel iarăși de fericire. (Iov 22:21)",
+      "Deci ce vom zice noi în fața tuturor acestor lucruri? Dacă Dumnezeu este pentru noi, cine va fi împotriva noastră? (Romani 8:31)",
+      "Căci suntem în clipa când judecata stă să înceapă de la Casa lui Dumnezeu. Și, dacă începe cu noi, care va fi sfârșitul celor ce nu ascultă de Evanghelia lui Dumnezeu? (1 Petru 4:17)",
+      "El zicea cu glas tare: „Temeți-vă de Dumnezeu și dați-I slavă, căci a venit ceasul judecății Lui; și închinați-vă Celui ce a făcut cerul și pământul, marea și izvoarele apelor!” (Apocalipsa 14:7)",
+      "Apoi a urmat un alt înger, al doilea, și a zis: „A căzut, a căzut Babilonul, cetatea cea mare, care a adăpat toate neamurile din vinul mâniei curviei ei!” (Apocalipsa 14:8)",
+      "Apoi a urmat un alt înger, al treilea, și a zis cu glas tare: „Dacă se închină cineva fiarei și icoanei ei și primește semnul ei pe frunte sau pe mână, va bea și el din vinul mâniei lui Dumnezeu, turnat neamestecat în paharul mâniei Lui; și va fi chinuit în foc și în pucioasă, înaintea sfinților îngeri și înaintea Mielului. Și fumul chinului lor se suie în sus în vecii vecilor. Și nici ziua, nici noaptea n-au odihnă cei ce se închină fiarei și icoanei ei și oricine primește semnul numelui ei! (Apocalipsa 14:9-11)",
+      "Aici este răbdarea sfinților, care păzesc poruncile lui Dumnezeu și credința lui Isus.” (Apocalipsa 14:12)"
     ];
+
     window.current_text = "aaa";
 
     // Definition of exercises types
