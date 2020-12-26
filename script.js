@@ -131,8 +131,8 @@
 
     function refresh_texts() {
       // Update experience points and current level
-      $("p#info-points span").text(window.experience_points);
-      $("p#info-level span").text(window.current_level);
+      $("li#info-points span").text(window.experience_points);
+      $("li#info-level span").text(window.current_level);
       $("p#info-consecutive-successes span").text(window.consecutive_successes);
     }
 
