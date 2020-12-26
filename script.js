@@ -133,7 +133,7 @@
       // Update experience points and current level
       $("li#info-points span").text(window.experience_points);
       $("li#info-level span").text(window.current_level);
-      $("p#info-consecutive-successes span").text(window.consecutive_successes);
+      $("li#info-consecutive-successes span").text(window.consecutive_successes);
     }
 
     function game_over() {
@@ -344,8 +344,8 @@
 
       window.current_exercise_type = choosen_exercise_id;
 
-      $("div#debug-info p.exercise-id span").text(choosen_exercise_id);
-      $("div#debug-info p.exercise-points span").text(exercise.points);
+      $("div#debug-info li.exercise-id span").text(choosen_exercise_id);
+      $("div#debug-info li.exercise-points span").text(exercise.points);
       $("div#exercise-info p.exercise-title").text(exercise.title);
       $("div#exercise-info p.exercise-description").text(exercise.description);
 
