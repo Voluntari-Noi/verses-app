@@ -243,7 +243,7 @@
                 <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
                 alert("Corect");
                 clear_board();
-                $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
+                $(document).trigger("exercise_success_event", ["bim", "baz"]);
                 // $(".word").css("pointer-events", "none");
               } else {
                 if (alerted_fail == false) {
@@ -275,30 +275,37 @@
     $.fn.fill_reference = function () {
       // Fill the reference for a given text
       this.empty();
+
       var wholeText = window.current_text;
       var verse = "";
       var reference = "";
       var lIndexOfParenthesis = wholeText.lastIndexOf("(");
+
       if (lIndexOfParenthesis > 0) {
         verse = wholeText.substring(0, lIndexOfParenthesis);
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
       };
+
       console.log(window.current_text)
-      this.append('<p style="background-color:white;padding:15px;" class="dp4_displayed_verse">' + verse + "</p>");
-      var selectHtml = '<select class="dp4_carte">';
+
+      this.append('<p class="dp4_displayed_verse">' + verse + "</p>");
+      var selectHtml = '<select class="dp4_carte custom-select">';
+
       window.all_books.forEach(element => {
         selectHtml += '<option value="' + element + '">' + element + '</option>';
       });
+
       this.append(selectHtml + "</select>");
       this.append(" ");
       this.append('<input class="dp4_capitol" style="width:30px" />');
       this.append(' : ');
       this.append('<input class="dp4_versete"  style="width:35px"/><br/><br/>');
-      this.append("<button class='dp4_done btn btn-success'>Verifică</button>");
+      this.append("<button class='dp4_done btn btn-primary'>Verifică</button>");
+
       $("button.dp4_done").on("click", function () {
         var userReference = $(".dp4_carte").val() + " " + $(".dp4_capitol").val() + ":" + $(".dp4_versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
-          $(document).trigger("exercise_success_event", ["SUCCESS"]);  // TODO: status? (fail/success) extra points?
+          $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
           $(document).trigger("exercise_fail_event", ["FAIL"]);
         }
@@ -329,9 +336,6 @@
       var plugin_name = exercise.plugin_name;
       console.log("Plugin: " + plugin_name);
 
-      // cerem plugin-ul corespunzator cu exercitiul
-      // window.current_verse
-      // TODO implement plugin ID000 - template
       window.current_text = random_from_list(window.texts);
       $("div#exercise-board")[plugin_name]();
 

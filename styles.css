@@ -49,6 +49,7 @@ div.row.row-footer {
   position: relative;
   height: 100%;
   width: 100%;
+  border: 2px solid #555;
 }
 
 .word {
@@ -96,4 +97,16 @@ div.row.row-footer {
 p.dp4_displayed_verse {
   background: #f5f5f5;
   background-color: #f5f5f5 !important;
+  padding: 20px;
+  border: 2px solid #555;
+}
+
+p.dp4_displayed_verse::first-letter {
+  font-weight: bold;
+  color: white;
+  background-color: #999;
+  padding: 5px;
+  font-size: 200%;
+  margin-right: 3px;
+  border: 2px solid #555;
 }
