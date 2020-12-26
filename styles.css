@@ -24,7 +24,7 @@
   padding: 0.2em;
   margin: 2px 2px 2px 2px;
   background: white;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .dropped {
@@ -51,11 +51,11 @@
 }
 
 .text-with-blank p {
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 .blank-words-right {
-  width: calc(100% - 20px);
+  width: 100%;
   background: #D9D9D9;
   padding: 10px 10px 10px 10px;
   float: right;
