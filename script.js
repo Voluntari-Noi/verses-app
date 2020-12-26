@@ -344,10 +344,10 @@
 
       window.current_exercise_type = choosen_exercise_id;
 
-      $("div#exercise-info p.exercise-id").text(choosen_exercise_id);
+      $("div#debug-info p.exercise-id span").text(choosen_exercise_id);
+      $("div#debug-info p.exercise-points span").text(exercise.points);
       $("div#exercise-info p.exercise-title").text(exercise.title);
       $("div#exercise-info p.exercise-description").text(exercise.description);
-      $("div#exercise-info p.exercise-points span").text(exercise.points);
 
       var plugin_name = exercise.plugin_name;
       console.log("Plugin: " + plugin_name);

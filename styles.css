@@ -65,3 +65,8 @@ ul#profile-info {
   border-top: 1px solid #000;
   border-bottom: 1px solid #000;
 }
+
+div#debug-info {
+  margin-top: 30px;
+  border-top: 1px solid #000;
+}
