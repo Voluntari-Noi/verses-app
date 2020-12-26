@@ -17,6 +17,10 @@ body {
   background: #e9b872;
 }
 
+div.row {
+  padding: 10px;
+}
+
 div.row.row-header {
   background: #a63d40;
   color: white;
@@ -28,6 +32,10 @@ div.row.row-user {
 }
 
 div.row.row-board {
+  background: white;
+}
+
+div.row.row-footer {
   background: white;
 }
 
