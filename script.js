@@ -34,18 +34,6 @@
         'points': 1,
       },
       'ID002': {
-        'plugin_name': 'demo_plugin2',
-        'title': 'Toate cuvintele',
-        'description': 'Aranjează cuvintele în ordinea potrivită, descoperă versetul.',
-        'points': 2,
-      },
-      'ID003': {
-        'plugin_name': 'demo_plugin3',
-        'title': 'Puzzle',
-        'description': 'Rezolvă puzzle-ul, învață versetul.',
-        'points': 3,
-      },
-      'ID004': {
         'plugin_name': 'fill_reference',
         'title': 'Referinta lipsa',
         'description': 'Introdu referinta pentru acest verset.',
@@ -87,27 +75,27 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID001'],
+        'exercises_types': ['ID002'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001']
       },
       2: {
-        'exercises_types': ['ID001', 'ID002', 'ID004'],
+        'exercises_types': ['ID001', 'ID002'],
         'success_messages': ['M002', 'M003'],
         'fail_messages': ['F002', 'F003']
       },
       3: {
-        'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
+        'exercises_types': ['ID001', 'ID002'],
         'success_messages': ['M003', 'M004'],
         'fail_messages': ['F003']
       },
       4: {
-        'exercises_types': ['ID003', 'ID004'],
+        'exercises_types': ['ID001', 'ID002'],
         'success_messages': ['M004', 'M005'],
         'fail_messages': ['F003', 'F004', 'F005']
       },
       5: {
-        'exercises_types': ['ID001', 'ID002', 'ID003'],
+        'exercises_types': ['ID001', 'ID002'],
         'success_messages': ['M005', 'M006'],
         'fail_messages': ['F006']
       },
