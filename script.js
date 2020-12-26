@@ -35,8 +35,8 @@
       },
       'ID002': {
         'plugin_name': 'fill_reference',
-        'title': 'Referinta lipsa',
-        'description': 'Introdu referinta pentru acest verset.',
+        'title': 'Referința lipsă',
+        'description': 'Introdu referința pentru acest text:',
         'points': 3,
       },
     }
@@ -272,30 +272,6 @@
       show_verse(window.current_verse);
     };
 
-    $.fn.demo_plugin1 = function () {
-      this.text("DEMO PLUGIN 1 LOADED:" + window.current_text);
-      this.append("<button class='done'>Done</button>");
-      $("button.done").on("click", function () {
-        $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
-      });
-    };
-
-    $.fn.demo_plugin2 = function () {
-      this.text("DEMO PLUGIN 2 LOADED:" + window.current_text);
-      this.append("<button class='done'>Done</button>");
-      $("button.done").on("click", function () {
-        $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
-      });
-    };
-
-    $.fn.demo_plugin3 = function () {
-      this.text("DEMO PLUGIN 3 LOADED:" + window.current_text);
-      this.append("<button class='done'>Done</button>");
-      $("button.done").on("click", function () {
-        $(document).trigger("exercise_success_event", ["bim", "baz"]);  // TODO: status? (fail/success) extra points?
-      });
-    };
-
     $.fn.fill_reference = function () {
       // Fill the reference for a given text
       this.empty();
@@ -307,7 +283,8 @@
         verse = wholeText.substring(0, lIndexOfParenthesis);
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
       };
-      this.append('<p style="background-color:white;padding:15px;" class="dp4_displayed_verse">' + window.current_text + "</p>");
+      console.log(window.current_text)
+      this.append('<p style="background-color:white;padding:15px;" class="dp4_displayed_verse">' + verse + "</p>");
       var selectHtml = '<select class="dp4_carte">';
       window.all_books.forEach(element => {
         selectHtml += '<option value="' + element + '">' + element + '</option>';
@@ -317,13 +294,13 @@
       this.append('<input class="dp4_capitol" style="width:30px" />');
       this.append(' : ');
       this.append('<input class="dp4_versete"  style="width:35px"/><br/><br/>');
-      this.append("<button class='dp4_done'>Done</button>");
+      this.append("<button class='dp4_done btn btn-success'>Verifică</button>");
       $("button.dp4_done").on("click", function () {
         var userReference = $(".dp4_carte").val() + " " + $(".dp4_capitol").val() + ":" + $(".dp4_versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
           $(document).trigger("exercise_success_event", ["SUCCESS"]);  // TODO: status? (fail/success) extra points?
         } else {
-          $(document).trigger("exercise_success_event", ["FAIL"]);
+          $(document).trigger("exercise_fail_event", ["FAIL"]);
         }
       });
     };
@@ -346,7 +323,7 @@
 
       $("div#debug-info li.exercise-id span").text(choosen_exercise_id);
       $("div#debug-info li.exercise-points span").text(exercise.points);
-      $("div#exercise-info p.exercise-title").text(exercise.title);
+      $("div#exercise-info h3.exercise-title").text(exercise.title);
       $("div#exercise-info p.exercise-description").text(exercise.description);
 
       var plugin_name = exercise.plugin_name;
