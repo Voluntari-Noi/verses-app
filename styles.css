@@ -88,6 +88,7 @@ button#fail {
   padding: 0.2em;
   margin: 2px 2px 2px 2px;
   background: white;
+  line-height: 1.5;
 }
 
 .dropped {
