@@ -12,31 +12,41 @@
     <title>Versete de memorat - Pentru Cer</title>
   </head>
   <body>
-    <h1>Versete de memorat</h1>
-
-    <div id="profile-container">
-      <p id="info-nickname"><span>Anonim</span></p>
-      <p id="info-level">Level <span>1</span></p>
-      <p id="info-points"><span>0</span> points</p>
-    </div>
-
-    <div id="exercise-container">
-      <div id="exercise-info">
-        <p class="exercise-id debug">Exercise ID</p>
-        <p id="info-consecutive-successes" class="debug">Consecutive succeses: <span>0</span></p>
-        <p class="exercise-title">Exercise type here</p>
-        <p class="exercise-description">Exercise description here</p>
-        <p class="exercise-points debug">Points if you succeed: <span>0</span></p>
+    <div class="container">
+      <div class="row">
+        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <h2 class="text-center">Versete de memorat</h2>
+        </div>
       </div>
 
-      <div id="exercise-board">
-        <p class="debug">TODO implement this for each exercise type</p>
+      <div class="row">
+        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <ul id="profile-info" class="list-inline text-center">
+            <li id="info-nickname" class="list-inline-item"><span>Anonim</span></li>
+            <li id="info-level" class="list-inline-item">Level <span>1</span></li>
+            <li id="info-points" class="list-inline-item"><span>0</span> points</li>
+          </ul>
+        </div>
       </div>
-    </div>
 
-    <div id="exercise-controls">
-      <button id="fail">Fail</button>
-      <button id="some-experience">Success</button>
+      <div id="exercise-container">
+        <div id="exercise-info">
+          <p class="exercise-id debug">Exercise ID</p>
+          <p id="info-consecutive-successes" class="debug">Consecutive succeses: <span>0</span></p>
+          <p class="exercise-title">Exercise type here</p>
+          <p class="exercise-description">Exercise description here</p>
+          <p class="exercise-points debug">Points if you succeed: <span>0</span></p>
+        </div>
+
+        <div id="exercise-board">
+          <p class="debug">TODO implement this for each exercise type</p>
+        </div>
+      </div>
+
+      <div id="exercise-controls">
+        <button id="fail">Fail</button>
+        <button id="some-experience">Success</button>
+      </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

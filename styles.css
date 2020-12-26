@@ -60,3 +60,8 @@
   padding: 10px 10px 10px 10px;
   float: right;
 }
+
+ul#profile-info {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
