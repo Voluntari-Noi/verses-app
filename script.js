@@ -134,6 +134,7 @@
       $("li#info-points span").text(window.experience_points);
       $("li#info-level span").text(window.current_level);
       $("li#info-consecutive-successes span").text(window.consecutive_successes);
+      $("li#info-current-text span").text(window.current_text);
     }
 
     function game_over() {
@@ -397,6 +398,7 @@
       // update_progress(); only for logged in case
 
       new_exercise();
+      refresh_texts();
     }
 
     function load_profile() {
