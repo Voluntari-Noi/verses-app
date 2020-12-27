@@ -213,11 +213,12 @@
       return str.match("^[a-zA-ZășşțţâîĂȘȚÂÎ-]+$");
     }
 
-    function ok_to_hide(word) {
+    function ok_to_hide(word, i_tried) {
       // decide if the given word is ok to be a hidden one
+      // If tried multiple times, it seems we must accept shorter words
       var min_word_length = 5;
       if(is_word(word)) {
-        if(word.length > min_word_length) {
+        if(word.length > min_word_length - i_tried) {
           return true;
         }
       }
@@ -303,13 +304,19 @@
         var split_text = split_current_text();
 
         var text_definition = "";
-        split_text.forEach(element => {
-          if(ok_to_hide(element) && more_and_more_probable_by_level_up(window.current_level)) {
-            text_definition = text_definition + "[" + element + "]";
-          } else {
-            text_definition += element;
-          }
-        });
+        var i_tried = 0;
+        var nr_choosen = 0;
+        do {
+          split_text.forEach(element => {
+            if(ok_to_hide(element, i_tried) && more_and_more_probable_by_level_up(window.current_level)) {
+              text_definition = text_definition + "[" + element + "]";
+              nr_choosen ++;
+            } else {
+              text_definition += element;
+            }
+          });
+          i_tried ++;
+        } while (nr_choosen == 0);
 
         console.log(text_definition);
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
@@ -492,14 +499,18 @@
       var hidden_words = [];
       var hidden_word_placeholder = "_____";
 
-      split_text.forEach(element => {
-        if(ok_to_hide(element) && more_and_more_probable_by_level_up(window.current_level)) {
-          text_definition = text_definition + hidden_word_placeholder;
-          hidden_words.push(element);
-        } else {
-          text_definition += element;
-        }
-      });
+      var i_tried = 0;
+      do {
+        split_text.forEach(element => {
+          if(ok_to_hide(element, i_tried) && more_and_more_probable_by_level_up(window.current_level)) {
+            text_definition = text_definition + hidden_word_placeholder;
+            hidden_words.push(element);
+          } else {
+            text_definition += element;
+          }
+        });
+        i_tried ++;
+      } while (hidden_words.length == 0);
 
       $("div#exercise-board").append("<p class='hidden-text'>" + text_definition + "</p>");
 
