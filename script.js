@@ -139,7 +139,7 @@
 
     function game_over() {
       // You won!
-      alert("You won the game. Congrats!");
+      alertify.message("You won the game. Congrats!");
       $("button#some-experience").hide();
       $("button#fail").hide();
     }
@@ -388,7 +388,7 @@
       var message = fail_messages[choosen_msg_id];
       window.consecutive_successes = 0;
       refresh_texts();
-      alert(message);
+      alertify.error(message);
     }
 
     function start_game() {
