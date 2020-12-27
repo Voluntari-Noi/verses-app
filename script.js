@@ -411,9 +411,9 @@
         if(pressed_letter == hidden_words[0][0]) {
           $(this).hide();
           alertify.message(hidden_words[0]);
-          var current_hidden_text = $("p.hidden-text").text();
-          var replaced_first = current_hidden_text.replace(hidden_word_placeholder, hidden_words[0]);
-          $("p.hidden-text").text(replaced_first);
+          var current_hidden_text = $("p.hidden-text").html();
+          var replaced_first = current_hidden_text.replace(hidden_word_placeholder, "<b>" + hidden_words[0] + "</b>");
+          $("p.hidden-text").html(replaced_first);
           hidden_words.shift();
           console.log(hidden_words);
           if(hidden_words.length == 0) {
