@@ -7,6 +7,7 @@
     window.current_exercise_type = 'ID001';
     window.is_logged_in = false;
     window.consecutive_successes = 0;
+    window.bonus_points = 0;
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmi', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
     window.texts = [
     "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea. (Psalmii 119:105)",
@@ -580,6 +581,8 @@
 
       var points_for_this = exercises_types[window.current_exercise_type].points;
       window.experience_points += points_for_this;
+      window.experience_points += window.bonus_points;
+      window.bonus_points = 0;
 
       console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
@@ -676,6 +679,11 @@
 
     // In case of success:
     $("button#some-experience").on("click", update_progress);
+
+    $("button#some-experience-bonus").on("click", function() {
+      window.bonus_points = 20;
+      update_progress();
+    });
 
     // In case of fail:
     $("button#fail").on("click", fail);
