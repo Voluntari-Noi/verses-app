@@ -39,6 +39,12 @@
         'description': 'Introdu referința pentru acest text:',
         'points': 3,
       },
+      'ID003': {
+        'plugin_name': 'fill_text',
+        'title': 'Scrie textul',
+        'description': 'Introdu textul pentru această referință:',
+        'points': 5,
+      },
     }
 
     // Simulate a user profile
@@ -85,17 +91,17 @@
         'fail_messages': ['F002', 'F003']
       },
       3: {
-        'exercises_types': ['ID001', 'ID002'],
+        'exercises_types': ['ID001', 'ID002', 'ID003'],
         'success_messages': ['M003', 'M004'],
         'fail_messages': ['F003']
       },
       4: {
-        'exercises_types': ['ID001', 'ID002'],
+        'exercises_types': ['ID001', 'ID002', 'ID003'],
         'success_messages': ['M004', 'M005'],
         'fail_messages': ['F003', 'F004', 'F005']
       },
       5: {
-        'exercises_types': ['ID001', 'ID002'],
+        'exercises_types': ['ID001', 'ID002', 'ID003'],
         'success_messages': ['M005', 'M006'],
         'fail_messages': ['F006']
       },
@@ -318,6 +324,44 @@
                             $("div#exercise-board .dp4-capitol").val() + ":" +
                             $("div#exercise-board .dp4-versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
+          $(document).trigger("exercise_success_event", ["SUCCESS"]);
+        } else {
+          $(document).trigger("exercise_fail_event", ["FAIL"]);
+        }
+      });
+    };
+
+    $.fn.fill_text = function () {
+      // Fill the text for a given reference
+      this.empty();
+
+      var wholeText = window.current_text;
+      var verse = "";
+      var reference = "";
+      var lIndexOfParenthesis = wholeText.lastIndexOf("(");
+
+      console.log(wholeText);
+
+      if (lIndexOfParenthesis > 0) {
+        verse = wholeText.substring(0, lIndexOfParenthesis - 1);
+        reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
+      };
+
+      $("div#exercise-board").append("<h3>" + reference + "</h3>");
+      $("div#exercise-board").append("<textarea class='form-control' id='verse-text' rows='3'></textarea>");
+
+      this.append("<button class='check-done btn btn-primary'>Verifică</button>");
+
+      $("button.check-done").on("click", function () {
+        var user_text = $("textarea#verse-text").val();
+
+        var aa = user_text.toLowerCase();
+        var bb = verse.toLowerCase();
+
+        console.log(aa);
+        console.log(bb);
+
+        if (aa == bb) {
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
           $(document).trigger("exercise_fail_event", ["FAIL"]);
