@@ -111,6 +111,25 @@
       return str.match("^[a-zA-ZășțâîĂȘȚÂÎ-]+$");
     }
 
+    function random_between(min, max) {
+      // return a random number between min and max
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+
+    function is_choosen(level) {
+      // a way to generate difficulty for each level
+      // Level 1: 1/2
+      // Level 2: 1/3
+      // Level 3: 1/4 etc
+      var min = 1;
+      var number = 1;
+      var max = level + 1;
+      console.log("Random: ");
+      var res = random_between(min, max) === number;
+      console.log(res);
+      return res;
+    }
+
     function shuffle(array) {
       var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -172,7 +191,7 @@
 
         var text_definition = "";
         split_text.forEach(element => {
-          if(ok_to_hide(element)) {
+          if(ok_to_hide(element) && !is_choosen(window.current_level)) {
             text_definition = text_definition + "[" + element + "]";
           } else {
             text_definition += element;
