@@ -668,6 +668,8 @@
       fail();
     });
 
+    alertify.set('notifier','position', 'top-right');
+
     start_game();
 
     // These are for testing:
