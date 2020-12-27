@@ -43,27 +43,6 @@
         </div>
       </div>
 
-      <!-- TODO use as template -->
-      <div class="row row-board">
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="input-group mb-3">
-            <select class="form-select" id="inputGroupSelect01">
-              <option selected>Carte</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
-            </select>
-          </div>
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-          <div class="input-group mb-3">
-            <input type="text" class="form-control" placeholder="Capitol" aria-label="Capitol">
-            <span class="input-group-text">:</span>
-            <input type="text" class="form-control" placeholder="Verset" aria-label="Verset">
-          </div>
-        </div>
-      </div>
-
       <div class="row row-footer">
         <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="debug-info">
@@ -82,6 +61,27 @@
           </div>
         </div>
       </div>
+
+      <div class="app-templates app-hidden"
+        <!-- Template for fill_reference -->
+        <div class="row row-board dp4-template app-hidden">
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="input-group mb-3">
+              <select class="form-select dp4-carte" id="inputGroupSelect01">
+                <option selected>Carte</option>
+              </select>
+            </div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <div class="input-group mb-3">
+              <input type="text" class="form-control dp4-capitol" placeholder="Capitol" aria-label="Capitol">
+              <span class="input-group-text">:</span>
+              <input type="text" class="form-control dp4-versete" placeholder="Verset" aria-label="Verset">
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

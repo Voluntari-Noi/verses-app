@@ -286,24 +286,20 @@
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
       };
 
-      console.log(window.current_text)
+      this.append('<p class="dp4-displayed-verse">' + verse + "</p>");
+      $("div.app-templates div.dp4-template").clone().removeClass("app-hidden").appendTo("div#exercise-board")
 
-      this.append('<p class="dp4_displayed_verse">' + verse + "</p>");
-      var selectHtml = '<select class="dp4_carte custom-select">';
-
-      window.all_books.forEach(element => {
-        selectHtml += '<option value="' + element + '">' + element + '</option>';
+      $.each(window.all_books, function (i, item) {
+        $('div#exercise-board select.dp4-carte').append($('<option>', {
+          value: item,
+          text : item
+        }));
       });
 
-      this.append(selectHtml + "</select>");
-      this.append(" ");
-      this.append('<input class="dp4_capitol" style="width:30px" />');
-      this.append(' : ');
-      this.append('<input class="dp4_versete"  style="width:35px"/><br/><br/>');
-      this.append("<button class='dp4_done btn btn-primary'>Verifică</button>");
+      this.append("<button class='dp4-done btn btn-primary'>Verifică</button>");
 
-      $("button.dp4_done").on("click", function () {
-        var userReference = $(".dp4_carte").val() + " " + $(".dp4_capitol").val() + ":" + $(".dp4_versete").val();
+      $("button.dp4-done").on("click", function () {
+        var userReference = $(".dp4-carte").val() + " " + $(".dp4-capitol").val() + ":" + $(".dp4-versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
