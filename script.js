@@ -303,10 +303,11 @@
 
         var split_text = split_current_text();
 
-        var text_definition = "";
         var i_tried = 0;
         var nr_choosen = 0;
+        var text_definition = "";
         do {
+          text_definition = "";
           split_text.forEach(element => {
             if(ok_to_hide(element, i_tried) && more_and_more_probable_by_level_up(window.current_level)) {
               text_definition = text_definition + "[" + element + "]";
