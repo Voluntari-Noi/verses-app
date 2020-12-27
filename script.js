@@ -299,7 +299,9 @@
       this.append("<button class='dp4-done btn btn-primary'>Verifică</button>");
 
       $("button.dp4-done").on("click", function () {
-        var userReference = $(".dp4-carte").val() + " " + $(".dp4-capitol").val() + ":" + $(".dp4-versete").val();
+        var userReference = $("div#exercise-board .dp4-carte").val() + " " +
+                            $("div#exercise-board .dp4-capitol").val() + ":" +
+                            $("div#exercise-board .dp4-versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
