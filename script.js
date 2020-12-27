@@ -45,6 +45,12 @@
         'description': 'Introdu textul pentru această referință:',
         'points': 5,
       },
+      'ID004': {
+        'plugin_name': 'fill_by_first_letter',
+        'title': 'Prima literă',
+        'description': 'Introdu textul apăsând prima literă a fiecărui cuvânt în ordine:',
+        'points': 4,
+      }
     }
 
     // Simulate a user profile
@@ -81,7 +87,7 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID001'],
+        'exercises_types': ['ID004'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001']
       },
@@ -96,12 +102,12 @@
         'fail_messages': ['F003']
       },
       4: {
-        'exercises_types': ['ID001', 'ID002', 'ID003'],
+        'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M004', 'M005'],
         'fail_messages': ['F003', 'F004', 'F005']
       },
       5: {
-        'exercises_types': ['ID001', 'ID002', 'ID003'],
+        'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M005', 'M006'],
         'fail_messages': ['F006']
       },
@@ -115,6 +121,18 @@
     function is_word(str) {
       // Check if a given string is a word
       return str.match("^[a-zA-ZășțâîĂȘȚÂÎ-]+$");
+    }
+
+    function ok_to_hide(word) {
+      // decide if the given word is ok to be a hidden one
+      var min_word_length = 5;
+      if(is_word(word)) {
+        if(word.length > min_word_length) {
+          return true;
+        }
+      }
+
+      return false;
     }
 
     function random_between(min, max) {
@@ -170,18 +188,6 @@
     }
 
     $.fn.blank_words = function () {
-      function ok_to_hide(word) {
-        // decide if the given word is ok to be a hidden one
-        var min_word_length = 5;
-        if(is_word(word)) {
-          if(word.length > min_word_length) {
-            return true;
-          }
-        }
-
-        return false;
-      }
-
       function show_verse() {
         $("div#exercise-board").html("<div class='blank-words-test'><div class='blank-words-left'></div><div class='blank-words-right'></div></div>")
         $(".blank-words-right").html("");
@@ -367,6 +373,68 @@
           $(document).trigger("exercise_fail_event", ["FAIL"]);
         }
       });
+    };
+
+
+    $.fn.fill_by_first_letter = function () {
+      // Fill the text by pressing first letter of each word, in correct order
+      this.empty();
+
+      var split_text = window.current_text.match(/[a-zășțâî-]+|[^a-zășțâî-]+/gi)
+
+      var text_definition = "";
+      var hidden_words = [];
+      var hidden_word_placeholder = "_____";
+
+      split_text.forEach(element => {
+        if(ok_to_hide(element)) {
+          text_definition = text_definition + hidden_word_placeholder;
+          hidden_words.push(element);
+        } else {
+          text_definition += element;
+        }
+      });
+
+      $("div#exercise-board").append("<p class='hidden-text'>" + text_definition + "</p>");
+
+      var first_letters = hidden_words.slice();  // Yeah. Else both arrays are changed on shuffle
+      first_letters = shuffle(first_letters);
+
+      first_letters.forEach(function (item) {
+        $("div#exercise-board").append("<button class='press-letter btn btn-primary'>" + item[0] + "</button> ");
+      });
+
+      console.log(hidden_words);
+
+      $("button.press-letter").on("click", function() {
+        var pressed_letter = $(this).text();
+        if(pressed_letter == hidden_words[0][0]) {
+          alertify.message(hidden_words[0]);
+          var current_hidden_text = $("p.hidden-text").text();
+          var replaced_first = current_hidden_text.replace(hidden_word_placeholder, hidden_words[0]);
+          $("p.hidden-text").text(replaced_first);
+        } else {
+          alertify.error("Nu!");
+        }
+      });
+
+      // this.append("<button class='check-done btn btn-primary'>Verifică</button>");
+      //
+      // $("button.check-done").on("click", function () {
+      //   var user_text = $("textarea#verse-text").val();
+      //
+      //   var aa = user_text.toLowerCase();
+      //   var bb = verse.toLowerCase();
+      //
+      //   console.log(aa);
+      //   console.log(bb);
+      //
+      //   if (aa == bb) {
+      //     $(document).trigger("exercise_success_event", ["SUCCESS"]);
+      //   } else {
+      //     $(document).trigger("exercise_fail_event", ["FAIL"]);
+      //   }
+      // });
     };
 
     function new_exercise() {
