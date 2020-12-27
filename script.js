@@ -75,7 +75,7 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID002'],
+        'exercises_types': ['ID001'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001']
       },
@@ -281,6 +281,8 @@
       var reference = "";
       var lIndexOfParenthesis = wholeText.lastIndexOf("(");
 
+      console.log(wholeText);
+
       if (lIndexOfParenthesis > 0) {
         verse = wholeText.substring(0, lIndexOfParenthesis);
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
@@ -392,7 +394,7 @@
 
     function start_game() {
       // Init game starting with user's current experience points
-      update_progress();
+      // update_progress(); only for logged in case
 
       new_exercise();
     }
