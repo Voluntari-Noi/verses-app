@@ -87,17 +87,17 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID004'],
+        'exercises_types': ['ID001', 'ID004'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001']
       },
       2: {
-        'exercises_types': ['ID001', 'ID002'],
+        'exercises_types': ['ID001', 'ID002', 'ID004'],
         'success_messages': ['M002', 'M003'],
         'fail_messages': ['F002', 'F003']
       },
       3: {
-        'exercises_types': ['ID001', 'ID002', 'ID003'],
+        'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M003', 'M004'],
         'fail_messages': ['F003']
       },
@@ -387,7 +387,7 @@
       var hidden_word_placeholder = "_____";
 
       split_text.forEach(element => {
-        if(ok_to_hide(element)) {
+        if(ok_to_hide(element) && more_and_more_probable_by_level_up(window.current_level)) {
           text_definition = text_definition + hidden_word_placeholder;
           hidden_words.push(element);
         } else {
