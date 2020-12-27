@@ -292,7 +292,7 @@
 
     function split_current_text() {
       // Split the current text in parts: words and non-words, but keep their order
-      return window.current_text.match(/[a-zășșțţâî-]+|[^a-zășșțţâî-]+/gi);
+      return window.current_text.match(/[a-zășşțţâî-]+|[^a-zășşțţâî-]+/gi);
     }
 
     $.fn.blank_words = function () {
