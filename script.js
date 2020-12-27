@@ -146,7 +146,7 @@
 
     function new_level() {
       // New level
-      alert("New level. Yey!");
+      alertify.message("New level. Yey!");
     }
 
     $.fn.blank_words = function () {
@@ -242,14 +242,12 @@
               if (text_tried == text_correct) {
                 $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
                 <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
-                alert("Corect");
                 clear_board();
                 $(document).trigger("exercise_success_event", ["bim", "baz"]);
                 // $(".word").css("pointer-events", "none");
               } else {
                 if (alerted_fail == false) {
                   <!-- swal("Ai greșit!", "Încearcă din nou.", "error"); -->
-                  alert("Gresit");
                   $(document).trigger("exercise_fail_event", ["FAIL"]);
                 }
 
@@ -355,11 +353,11 @@
       var possible_messages = levels[window.current_level].success_messages;
       var choosen_msg_id = random_from_list(possible_messages);
       var message = success_messages[choosen_msg_id];
-      alert(message);
+      alertify.success(message);
       window.consecutive_successes += 1;
 
       if (window.consecutive_successes % 5 == 0) {
-        alert("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
+        alertify.message("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
       }
 
       new_exercise();
