@@ -31,25 +31,25 @@
         'plugin_name': 'blank_words',
         'title': 'Cuvinte lipsă',
         'description': 'Mută cuvintele la locul potrivit.',
-        'points': 1,
+        'points': 1
       },
       'ID002': {
         'plugin_name': 'fill_reference',
         'title': 'Referința lipsă',
         'description': 'Introdu referința pentru acest text:',
-        'points': 3,
+        'points': 3
       },
       'ID003': {
         'plugin_name': 'fill_text',
         'title': 'Scrie textul',
         'description': 'Introdu textul pentru această referință:',
-        'points': 5,
+        'points': 5
       },
       'ID004': {
         'plugin_name': 'fill_by_first_letter',
         'title': 'Prima literă',
         'description': 'Introdu textul apăsând prima literă a fiecărui cuvânt în ordine:',
-        'points': 4,
+        'points': 4
       }
     }
 
@@ -89,27 +89,32 @@
       1: {
         'exercises_types': ['ID001', 'ID004'],
         'success_messages': ['M001', 'M002'],
-        'fail_messages': ['F001']
+        'fail_messages': ['F001'],
+        'text_max_length': 100
       },
       2: {
         'exercises_types': ['ID001', 'ID002', 'ID004'],
         'success_messages': ['M002', 'M003'],
-        'fail_messages': ['F002', 'F003']
+        'fail_messages': ['F002', 'F003'],
+        'text_max_length': 150
       },
       3: {
         'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M003', 'M004'],
-        'fail_messages': ['F003']
+        'fail_messages': ['F003'],
+        'text_max_length': 200
       },
       4: {
         'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M004', 'M005'],
-        'fail_messages': ['F003', 'F004', 'F005']
+        'fail_messages': ['F003', 'F004', 'F005'],
+        'text_max_length': 300
       },
       5: {
         'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
         'success_messages': ['M005', 'M006'],
-        'fail_messages': ['F006']
+        'fail_messages': ['F006'],
+        'text_max_length': 10000
       },
     }
 
@@ -185,6 +190,17 @@
     function new_level() {
       // New level
       alertify.message("New level. Yey!");
+    }
+
+    function select_the_text_to_play() {
+      // We try to find a text ok for the current level
+      var text_max_length = levels[window.current_level].text_max_length;
+      var i_tried = 0;
+      do {
+        window.current_text = random_from_list(window.texts);
+        console.log(window.current_text.length);
+        i_tried ++;
+      } while (window.current_text.length > text_max_length && i_tried < 100);
     }
 
     $.fn.blank_words = function () {
@@ -449,7 +465,8 @@
       var plugin_name = exercise.plugin_name;
       console.log("Plugin: " + plugin_name);
 
-      window.current_text = random_from_list(window.texts);
+      select_the_text_to_play();
+
       $("div#exercise-board")[plugin_name]();
 
       console.log(window.current_exercise_type);
