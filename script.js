@@ -529,7 +529,6 @@
         var pressed_letter = $(this).text();
         if(pressed_letter == hidden_words[0][0]) {
           $(this).hide();
-          alertify.message(hidden_words[0]);
           var current_hidden_text = $("p.hidden-text").html();
           var replaced_first = current_hidden_text.replace(hidden_word_placeholder, "<b>" + hidden_words[0] + "</b>");
           $("p.hidden-text").html(replaced_first);
@@ -539,7 +538,7 @@
             $(document).trigger("exercise_success_event", ["SUCCESS"]);
           }
         } else {
-          alertify.error("Nu!");
+          $(document).trigger("exercise_fail_event", ["FAIL"]);
         }
       });
     };
