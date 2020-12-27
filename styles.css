@@ -1,15 +1,18 @@
 /*
- * Colors: https://coolors.co/151515-a63d40-e9b872-90a959-6494aa
+ *
+ * Colors: https://coolors.co/437c90-255957-eeebd3-a98743-f7c548
+ * #437c90
+ * #255957
+ * #eeebd3
+ * #a98743
+ * #f7c548
+ *
  * #151515
- * #a63d40
- * #e9b872
- * #90a959
- * #6494aa
  */
 
 body {
   color: #151515;
-  background: #e9b872;
+  background: #437c90;
 }
 
 div.row {
@@ -17,13 +20,17 @@ div.row {
 }
 
 div.row.row-header {
-  background: #a63d40;
+  background: #255957;
   color: white;
 }
 
+div.row.row-header h3 {
+  margin-bottom: 0;
+}
+
 div.row.row-user {
-  background: #90a959;
-  color: white;
+  background: #f7c548;
+  color: #151515;
 }
 
 div.row.row-board {
@@ -31,8 +38,12 @@ div.row.row-board {
 }
 
 div.row.row-footer {
-  background: #151515;
-  color: white;
+  background: #a98743;
+  color: #151515;
+}
+
+ul#profile-info {
+  margin-bottom: 0;
 }
 
 .word, .blank, .sorting-test-items {

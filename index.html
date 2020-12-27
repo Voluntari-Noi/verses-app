@@ -19,16 +19,6 @@
         </div>
       </div>
 
-      <div class="row row-user">
-        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <ul id="profile-info" class="list-inline text-center">
-            <li id="info-nickname" class="list-inline-item"><span>Anonim</span></li>
-            <li id="info-level" class="list-inline-item">Level <span>1</span></li>
-            <li id="info-points" class="list-inline-item"><span>0</span> points</li>
-          </ul>
-        </div>
-      </div>
-
       <div class="row row-board">
         <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="exercise-container">
@@ -44,6 +34,16 @@
         </div>
       </div>
 
+      <div class="row row-user">
+        <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <ul id="profile-info" class="list-inline text-center">
+            <li id="info-nickname" class="list-inline-item"><span>Anonim</span></li>
+            <li id="info-level" class="list-inline-item">Level <span>1</span></li>
+            <li id="info-points" class="list-inline-item"><span>0</span> points</li>
+          </ul>
+        </div>
+      </div>
+
       <div class="row row-footer">
         <div class="col col-lg-12 col-md-12 col-sm-12 col-xs-12">
           <div id="debug-info">
@@ -52,14 +52,14 @@
               <li class="exercise-id list-inline-item">Exercițiu: <span>ID001</span></li>
               <li id="info-consecutive-successes" class="list-inline-item">Consecutive: <span>0</span></li>
               <li class="exercise-points list-inline-item">Puncte pentru exercițiul curent: <span>0</span></li>
-              <li id="info-current-text" class="list-inline-item">Text ales: <span>0</span></li>
+              <li id="info-current-text" class="list-inline-item">Text ales: <b><span>0</span></b></li>
             </ul>
           </div>
 
           <div id="exercise-controls">
-            <p>Poți simula rezultatul exercițiului (fără să încerci să-l rezolvi) apăsând un buton:</p>
-            <button id="fail" class="btn btn-danger">Fail</button>
-            <button id="some-experience" class="btn btn-success">Success</button>
+            <h4>Simulează că ai rezolvat:</h4>
+            <button id="fail" class="btn btn-danger">Greșit</button>
+            <button id="some-experience" class="btn btn-success">Corect</button>
           </div>
         </div>
       </div>
