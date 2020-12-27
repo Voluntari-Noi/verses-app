@@ -409,32 +409,20 @@
       $("button.press-letter").on("click", function() {
         var pressed_letter = $(this).text();
         if(pressed_letter == hidden_words[0][0]) {
+          $(this).hide();
           alertify.message(hidden_words[0]);
           var current_hidden_text = $("p.hidden-text").text();
           var replaced_first = current_hidden_text.replace(hidden_word_placeholder, hidden_words[0]);
           $("p.hidden-text").text(replaced_first);
+          hidden_words.shift();
+          console.log(hidden_words);
+          if(hidden_words.length == 0) {
+            $(document).trigger("exercise_success_event", ["SUCCESS"]);
+          }
         } else {
           alertify.error("Nu!");
         }
       });
-
-      // this.append("<button class='check-done btn btn-primary'>Verifică</button>");
-      //
-      // $("button.check-done").on("click", function () {
-      //   var user_text = $("textarea#verse-text").val();
-      //
-      //   var aa = user_text.toLowerCase();
-      //   var bb = verse.toLowerCase();
-      //
-      //   console.log(aa);
-      //   console.log(bb);
-      //
-      //   if (aa == bb) {
-      //     $(document).trigger("exercise_success_event", ["SUCCESS"]);
-      //   } else {
-      //     $(document).trigger("exercise_fail_event", ["FAIL"]);
-      //   }
-      // });
     };
 
     function new_exercise() {
