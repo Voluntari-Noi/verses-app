@@ -307,6 +307,7 @@
         var nr_choosen = 0;
         var text_definition = "";
         do {
+          nr_choosen = 0;
           text_definition = "";
           split_text.forEach(element => {
             if(ok_to_hide(element, i_tried) && more_and_more_probable_by_level_up(window.current_level)) {
@@ -317,7 +318,7 @@
             }
           });
           i_tried ++;
-        } while (nr_choosen == 0);
+        } while (nr_choosen < 2); // Minimum 2 hidden words.
 
         console.log(text_definition);
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
@@ -511,7 +512,7 @@
           }
         });
         i_tried ++;
-      } while (hidden_words.length == 0);
+      } while (hidden_words.length < 2);  // Minimum 2 hidden words
 
       $("div#exercise-board").append("<p class='hidden-text'>" + text_definition + "</p>");
 
