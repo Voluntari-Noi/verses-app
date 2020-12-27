@@ -106,9 +106,9 @@
       $("div#exercise-board").html("");
     }
 
-    function only_letters(str) {
-      // Check if a given string have only letters
-      return str.match("^[a-zA-ZășțâîĂȘȚÂÎ]+$");
+    function is_word(str) {
+      // Check if a given string is a word
+      return str.match("^[a-zA-ZășțâîĂȘȚÂÎ-]+$");
     }
 
     function shuffle(array) {
@@ -152,7 +152,7 @@
       function ok_to_hide(word) {
         // decide if the given word is ok to be a hidden one
         var min_word_length = 5;
-        if(only_letters(word)) {
+        if(is_word(word)) {
           if(word.length > min_word_length) {
             return true;
           }
@@ -167,7 +167,7 @@
         $(".blank-words-left").html("");
         var reg = /([^[]+(?=]))/g;
 
-        var split_text = window.current_text.match(/[a-zășțâî]+|[^a-zășțâî]+/gi)
+        var split_text = window.current_text.match(/[a-zășțâî-]+|[^a-zășțâî-]+/gi)
 
         var text_definition = "";
         split_text.forEach(element => {
