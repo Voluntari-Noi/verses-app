@@ -3,7 +3,7 @@
     window.current_level = 1;
     window.experience_points = 0;
     window.number_of_levels = 5;
-    window.points_per_level = 10;
+    window.points_per_level = 50;
     window.current_exercise_type = 'ID001';
     window.is_logged_in = false;
     window.consecutive_successes = 0;
@@ -288,6 +288,11 @@
       } while (window.current_text.length > text_max_length && i_tried < 100);
     }
 
+    function split_current_text() {
+      // Split the current text in parts: words and non-words, but keep their order
+      return window.current_text.match(/[a-zășșțţâî-]+|[^a-zășșțţâî-]+/gi);
+    }
+
     $.fn.blank_words = function () {
       function show_verse() {
         $("div#exercise-board").html("<div class='blank-words-test'><div class='blank-words-left'></div><div class='blank-words-right'></div></div>")
@@ -295,7 +300,7 @@
         $(".blank-words-left").html("");
         var reg = /([^[]+(?=]))/g;
 
-        var split_text = window.current_text.match(/[a-zășșțţâî-]+|[^a-zășșțţâî-]+/gi)
+        var split_text = split_current_text();
 
         var text_definition = "";
         split_text.forEach(element => {
@@ -481,7 +486,7 @@
       // Fill the text by pressing first letter of each word, in correct order
       this.empty();
 
-      var split_text = window.current_text.match(/[a-zășțâî-]+|[^a-zășțâî-]+/gi)
+      var split_text = split_current_text();
 
       var text_definition = "";
       var hidden_words = [];
