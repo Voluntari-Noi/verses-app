@@ -588,10 +588,6 @@
 
       console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
-      var possible_messages = levels[window.current_level].success_messages;
-      var choosen_msg_id = random_from_list(possible_messages);
-      var message = success_messages[choosen_msg_id];
-      alertify.success(message);
       window.consecutive_successes += 1;
 
       if (window.consecutive_successes % 5 == 0) {
@@ -660,7 +656,17 @@
       console.log(arg1);           // "bim"
       console.log(arg2);           // "baz"
       console.log("YEEEY");
-      update_progress();
+
+      var possible_messages = levels[window.current_level].success_messages;
+      var choosen_msg_id = random_from_list(possible_messages);
+      var message = success_messages[choosen_msg_id];
+      alertify.success(message);
+
+      $("div.next-exercise button").show();
+      $("div.next-exercise button").on("click", function () {
+        update_progress();
+        $("div.next-exercise button").hide();
+      });
     });
 
     $(document).on("exercise_fail_event", {
