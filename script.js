@@ -384,7 +384,6 @@
               if (text_tried == text_correct) {
                 $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
                 <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
-                clear_board();
                 $(document).trigger("exercise_success_event", ["bim", "baz"]);
                 // $(".word").css("pointer-events", "none");
               } else {
