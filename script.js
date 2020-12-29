@@ -269,9 +269,12 @@
 
     function game_over() {
       // You won!
-      alertify.message("You won the game. Congrats!");
+      alertify.message("Ai terminat jocul. Felicitări!");
       $("button#some-experience").hide();
       $("button#fail").hide();
+      $("div.row.row-footer").hide();
+      $("div.row.row-board").html("<h2>Bravooooo!</h2>");
+      $("div.row.row-board").append("<a href='' class='btn btn-primary'>Începe din nou</a>");
     }
 
     function new_level() {
