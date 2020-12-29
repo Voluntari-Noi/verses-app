@@ -173,7 +173,7 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID001', 'ID004'],
+        'exercises_types': ['ID003'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001'],
         'text_max_length': 100
@@ -482,7 +482,9 @@
         console.log(aa);
         console.log(bb);
 
-        if (aa == bb) {
+        var xx = new Levenshtein(aa, bb);
+
+        if (xx < 20) {
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
           $(document).trigger("exercise_fail_event", ["FAIL"]);
