@@ -445,6 +445,7 @@
                             $("div#exercise-board .dp4-capitol").val() + ":" +
                             $("div#exercise-board .dp4-versete").val();
         if (userReference.toLowerCase() == reference.toLowerCase()) {
+          $("button.dp4-done").hide();
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
           $(document).trigger("exercise_fail_event", ["FAIL"]);
@@ -485,6 +486,7 @@
         var xx = new Levenshtein(aa, bb);
 
         if (xx < 20) {
+          $("button.check-done").hide();
           $(document).trigger("exercise_success_event", ["SUCCESS"]);
         } else {
           $(document).trigger("exercise_fail_event", ["FAIL"]);
