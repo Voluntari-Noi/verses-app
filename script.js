@@ -11,7 +11,7 @@
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmii', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
     window.texts = [
     "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea. (Psalmii 119:105)",
-    "Să ascultăm, dar, încheierea tuturor învățăturilor: Teme-te de Dumnezeu și păzește poruncile Lui. Aceasta este datoria oricărui om. (Eclesiast 12:13)",
+    "Să ascultăm, dar, încheierea tuturor învățăturilor: Teme-te de Dumnezeu și păzește poruncile Lui. Aceasta este datoria oricărui om. (Eclesiastul 12:13)",
     "Omul socotește că toate căile lui sunt fără prihană, dar Cel ce cercetează inimile este Domnul. (Proverbe 21:2)",
     "Puii de leu duc lipsă și li-e foame, dar cei ce caută pe Domnul nu duc lipsă de niciun bine. (Psalmii 34:10)",
     "Domnul va sfârși ce a început pentru mine. Doamne, bunătatea Ta ține în veci: nu părăsi lucrările mâinilor Tale. (Psalmii 138:8)",
@@ -78,7 +78,7 @@
     "Căutaţi în cartea Domnului şi citiţi! Niciuna din toate acestea nu va lipsi, nici una, nici alta nu vor da greş. Căci gura Domnului a poruncit lucrul acesta: Duhul Lui va strânge acele sălbăticiuni. (Isaia 34:16)",
     "Pot să se mute munţii, pot să se clatine dealurile, dar dragostea Mea nu se va muta de la tine, şi legământul Meu de pace nu se va clătina, zice Domnul, care are milă de tine. (Isaia 54:10)",
     "Dar dacă umblăm în lumină, după cum El însuşi este în lumină, avem părtăşie unii cu alţii; şi sângele lui Isus Hristos, Fiul Lui, ne curăţă de orice păcat. (1 Ioan 1:7)",
-    "Cinsteşte pe tatăl tău şi pe mama ta, pentru ca să ţi se lungească zilele în ţara pe care ţi-o dă Domnul Dumnezeul tău. (Exodul 20:12)",
+    "Cinsteşte pe tatăl tău şi pe mama ta, pentru ca să ţi se lungească zilele în ţara pe care ţi-o dă Domnul Dumnezeul tău. (Exod 20:12)",
     "Dar mai presus de toate acestea, îmbrăcaţi-vă cu dragostea, care este legătura desăvârşirii. (Coloseni 3:14)",
     "Iată, Eu vin curând; şi răsplata Mea este cu Mine, ca să dau fiecăruia după fapta lui. (Apocalipsa 22:11)",
     "Iată Eu stau la uşă şi bat. Dacă aude cineva glasul Meu şi deschide uşa, voi intra la el, voi cina cu el, şi el cu Mine. (Apocalipsa 3:20)",
@@ -94,8 +94,8 @@
     "Și faptele firii pământești sunt cunoscute și sunt acestea: preacurvia, curvia, necurăția, desfrânarea, închinarea la idoli, vrăjitoria, vrăjbile, certurile, zavistiile, mâniile, neînțelegerile, dezbinările, certurile de partide, pizmele, uciderile, bețiile, îmbuibările și alte lucruri asemănătoare cu acestea. Vă spun mai dinainte, cum am mai spus, că cei ce fac astfel de lucruri nu vor moșteni Împărăția lui Dumnezeu. (Galateni 5:19-21)",
     "Căci Eu ştiu gândurile pe care le am cu privire la voi, zice Domnul, gânduri de pace, şi nu de nenorocire, ca să vă dau un viitor şi o nădejde. Voi Mă veţi chema şi veţi pleca; Mă veţi ruga, şi vă voi asculta. Mă veţi căuta, şi Mă veţi găsi, dacă Mă veţi căuta cu toată inima. (Ieremia 29:11-13)",
     "Dar Domnul oştirilor va fi înălţat prin judecată, şi Dumnezeul cel sfânt va fi sfinţit prin dreptate. (Isaia 5:16)",
-    "Știu, Doamne, că judecățile Tale sunt drepte: din credincioșie m-ai smerit. (Psalmi 119:75)",
-    "Fă ca bunătatea Ta să-mi fie mângâierea, cum ai făgăduit robului Tău! (Psalmi 119:76)",
+    "Știu, Doamne, că judecățile Tale sunt drepte: din credincioșie m-ai smerit. (Psalmii 119:75)",
+    "Fă ca bunătatea Ta să-mi fie mângâierea, cum ai făgăduit robului Tău! (Psalmii 119:76)",
     "Doamne, Tu eşti Dumnezeul meu; pe Tine Te voi înălţa! Laud Numele Tău, căci ai făcut lucruri minunate; planurile Tale făcute mai dinainte s-au împlinit cu credincioşie. (Isaia 25:1)",
     "Binecuvântă, suflete, pe Domnul şi nu uita niciuna din binefacerile Lui! El îţi iartă toate fărădelegile tale, El îţi vindecă toate bolile tale; El îţi izbăveşte viaţa din groapă, El te încununează cu bunătate şi îndurare. (Psalmii 103:2-4)",
     "Domnul Dumnezeu a făcut pe om din ţărâna pământului, i-a suflat în nări suflare de viaţă, şi omul s-a făcut astfel un suflet viu. (Geneza 2:7)",
@@ -103,7 +103,7 @@
     "Noi însă suntem din Dumnezeu; cine cunoaşte pe Dumnezeu ne ascultă; cine nu este din Dumnezeu nu ne ascultă. Prin aceasta cunoaştem Duhul adevărului şi duhul rătăcirii. (1 Ioan 4:6) ",
     "Dacă nelegiuirile noastre mărturisesc împotriva noastră, lucrează pentru Numele Tău, Doamne! Căci abaterile noastre sunt multe, am păcătuit împotriva Ta. (Ieremia 14:7)",
     "Dar Domnul este turnul meu de scăpare, Dumnezeul meu este stânca mea de adăpost. (Psalmii 94:22)",
-    "Vrăjmășie voi pune între tine și femeie, între sămânţa ta și sămânţa ei. Aceasta îţi va zdrobi capul, și tu îi vei zdrobi călcâiul. (Genesa 3:15)",
+    "Vrăjmășie voi pune între tine și femeie, între sămânţa ta și sămânţa ei. Aceasta îţi va zdrobi capul, și tu îi vei zdrobi călcâiul. (Geneza 3:15)",
     "Duhul lui Dumnezeu să-L cunoaşteţi după aceasta: orice duh care mărturiseşte că Isus Hristos a venit în trup este de la Dumnezeu. (1 Ioan 4:2)",
     "Voi sunteţi lumina lumii. O cetate aşezată pe un munte nu poate să rămână ascunsă. (Matei 5:14)",
     "Tu ştii tot, Doamne! Adu-Ţi aminte de mine, nu mă uita, răzbună-mă pe prigonitorii mei! Nu mă lua, după îndelunga Ta răbdare. Gândeşte-Te că sufăr ocara din pricina Ta! (Ieremia 15:15)"
