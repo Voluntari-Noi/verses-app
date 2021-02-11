@@ -8,6 +8,7 @@
     window.is_logged_in = false;
     window.consecutive_successes = 0;
     window.bonus_points = 0;
+    window.hint_used = false;
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmii', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
     window.texts = [
     "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea. (Psalmii 119:105)",
@@ -291,6 +292,8 @@
         console.log(window.current_text.length);
         i_tried ++;
       } while (window.current_text.length > text_max_length && i_tried < 100);
+
+      $("div.hint p.text-hint").text(window.current_text);
     }
 
     function split_current_text() {
@@ -554,6 +557,10 @@
 
     function new_exercise() {
       // Start a new exercise
+      $("div.hint p").hide();
+      $("div.hint button").show();
+      window.hint_used = false;
+
       if (window.current_level === 0) {
         return;  // TODO fix me
       }
@@ -588,6 +595,10 @@
       var old_points = window.experience_points;
 
       var points_for_this = exercises_types[window.current_exercise_type].points;
+      if (window.hint_used) {
+        points_for_this = 0;
+      }
+
       window.experience_points += points_for_this;
       window.experience_points += window.bonus_points;
       window.bonus_points = 0;
@@ -595,8 +606,13 @@
       console.log("Ai câștigat " + points_for_this + " punct(e)!");
 
       window.consecutive_successes += 1;
+      console.log("Consecutive +1");
 
-      if (window.consecutive_successes % 5 == 0) {
+      if (window.hint_used) {
+        window.consecutive_successes = 0;
+      }
+
+      if (window.consecutive_successes % 5 == 0 && window.consecutive_successes > 0) {
         alertify.message("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
       }
 
@@ -669,10 +685,17 @@
       alertify.success(message);
 
       $("div.next-exercise button").show();
+      $("div.hint button").hide();
       $("div.next-exercise button").on("click", function () {
         update_progress();
         $("div.next-exercise button").hide();
       });
+    });
+
+    $("div.hint button").on("click", function () {
+      $("div.hint button").hide();
+      $("div.hint p.text-hint").show();
+      window.hint_used = true;
     });
 
     $(document).on("exercise_fail_event", {
