@@ -111,6 +111,7 @@
     ];
 
     window.current_text = "aaa";
+    window.old_text = "aaa";
 
     // Definition of exercises types
     window.exercises_types = {
@@ -290,7 +291,11 @@
       do {
         window.current_text = random_from_list(window.texts);
         i_tried ++;
-      } while (window.current_text.length > text_max_length && i_tried < 100);
+      } while (
+        window.current_text.length > text_max_length &&
+        window.old_text !== window.current_text &&
+        i_tried < 100
+      );
 
       $("div.hint p.text-hint").text(window.current_text);
     }
@@ -654,6 +659,7 @@
     $(document).on("exercise_success_event", {
       foo: "bar"
     }, function (event, arg1, arg2) {
+      window.old_text = window.current_text;
 
       var possible_messages = levels[window.current_level].success_messages;
       var choosen_msg_id = random_from_list(possible_messages);
