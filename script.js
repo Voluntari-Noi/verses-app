@@ -662,10 +662,11 @@
 
       $("div.next-exercise button").show();
       $("div.hint button").hide();
-      $("div.next-exercise button").on("click", function () {
-        update_progress();
-        $("div.next-exercise button").hide();
-      });
+    });
+
+    $("div.next-exercise button").on("click", function () {
+      update_progress();
+      $("div.next-exercise button").hide();
     });
 
     $("div.hint button").on("click", function () {
