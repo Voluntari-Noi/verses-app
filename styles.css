@@ -14,6 +14,7 @@
 body {
   color: #151515;
   background: #437c90;
+  background-image: url('images/bg-paper-blue.png');
 }
 
 div.row {
