@@ -22,9 +22,11 @@ div.row {
 }
 
 div.row.row-header {
-  background: #255957;
+  /* background: #255957; */
   color: white;
   text-align: center;
+  background: rgb(29,69,67);
+  background: linear-gradient(90deg, rgba(29,69,67,1) 0%, rgba(37,89,87,1) 35%, rgba(76,159,156,1) 100%);
 }
 
 div.row.row-header h3 {
@@ -43,8 +45,10 @@ div.row.row-header img.logo {
 }
 
 div.row.row-user {
-  background: #f7c548;
+  /* background: #f7c548; */
   color: #151515;
+  background: rgb(235,182,52);
+  background: linear-gradient(90deg, rgba(235,182,52,1) 0%, rgba(247,197,72,1) 35%, rgba(231,208,152,1) 100%);
 }
 
 div.row.row-board {
