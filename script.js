@@ -290,11 +290,12 @@
       var text_max_length = levels[window.current_level].text_max_length;
       var i_tried = 0;
       do {
-        window.current_text = random_from_list(window.texts);
+        do {
+          window.current_text = random_from_list(window.texts);
+        } while (window.old_text == window.current_text);
         i_tried ++;
       } while (
         window.current_text.length > text_max_length &&
-        window.old_text !== window.current_text &&
         i_tried < 100
       );
 
