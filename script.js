@@ -635,7 +635,7 @@
       refresh_texts();
       alertify.error(message);
 
-      if (window.consecutive_fails > 3) {
+      if (window.consecutive_fails >= 3) {
         new_exercise();
         refresh_texts();
       }
