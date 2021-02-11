@@ -17,6 +17,11 @@ body {
   background-image: url('images/bg-paper-blue.png');
 }
 
+div.container {
+  -webkit-box-shadow: 0px 8px 15px -1px rgba(0,0,0,0.41);
+  box-shadow: 0px 8px 15px -1px rgba(0,0,0,0.41);
+}
+
 div.row {
   padding: 10px;
 }
