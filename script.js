@@ -7,6 +7,7 @@
     window.current_exercise_type = 'ID001';
     window.is_logged_in = false;
     window.consecutive_successes = 0;
+    window.consecutive_fails = 0;
     window.bonus_points = 0;
     window.hint_used = false;
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmii', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
@@ -557,6 +558,8 @@
         return;  // TODO fix me
       }
 
+      window.consecutive_fails = 0;
+
       var possible_exercises = levels[window.current_level].exercises_types;
       var choosen_exercise_id = random_from_list(possible_exercises);
 
@@ -624,12 +627,18 @@
 
     function fail() {
       // When there is no progress
+      window.consecutive_fails += 1;
       var possible_messages = levels[window.current_level].fail_messages;
       var choosen_msg_id = random_from_list(possible_messages);
       var message = fail_messages[choosen_msg_id];
       window.consecutive_successes = 0;
       refresh_texts();
       alertify.error(message);
+
+      if (window.consecutive_fails > 3) {
+        new_exercise();
+        refresh_texts();
+      }
     }
 
     function start_game() {
