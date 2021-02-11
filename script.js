@@ -289,7 +289,6 @@
       var i_tried = 0;
       do {
         window.current_text = random_from_list(window.texts);
-        console.log(window.current_text.length);
         i_tried ++;
       } while (window.current_text.length > text_max_length && i_tried < 100);
 
@@ -327,7 +326,6 @@
           i_tried ++;
         } while (nr_choosen < 2); // Minimum 2 hidden words.
 
-        console.log(text_definition);
         var text_correct = text_definition.split("[").join("").split("]").join("");  // replace all [] with nothing
         var text_hidden = text_definition.match(reg);  // Extract the list of hidden words
 
@@ -386,7 +384,6 @@
 
             if (number_words_to_drop == 0) {
               var text_tried = $("div.blank-words-left p").text();
-              console.log(text_definition);
               if (text_tried == text_correct) {
                 $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
                 <!-- swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
@@ -427,8 +424,6 @@
       var reference = "";
       var lIndexOfParenthesis = wholeText.lastIndexOf("(");
 
-      console.log(wholeText);
-
       if (lIndexOfParenthesis > 0) {
         verse = wholeText.substring(0, lIndexOfParenthesis);
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
@@ -468,8 +463,6 @@
       var reference = "";
       var lIndexOfParenthesis = wholeText.lastIndexOf("(");
 
-      console.log(wholeText);
-
       if (lIndexOfParenthesis > 0) {
         verse = wholeText.substring(0, lIndexOfParenthesis - 1);
         reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
@@ -485,9 +478,6 @@
 
         var aa = user_text.toLowerCase();
         var bb = verse.toLowerCase();
-
-        console.log(aa);
-        console.log(bb);
 
         var xx = new Levenshtein(aa, bb);
 
@@ -535,8 +525,6 @@
         $("div#exercise-board").append("<button class='press-letter btn btn-primary'>" + item[0] + "</button> ");
       });
 
-      console.log(hidden_words);
-
       $("button.press-letter").on("click", function() {
         var pressed_letter = $(this).text();
         if(pressed_letter == hidden_words[0][0]) {
@@ -545,7 +533,6 @@
           var replaced_first = current_hidden_text.replace(hidden_word_placeholder, "<b>" + hidden_words[0] + "</b>");
           $("p.hidden-text").html(replaced_first);
           hidden_words.shift();
-          console.log(hidden_words);
           if(hidden_words.length == 0) {
             $(document).trigger("exercise_success_event", ["SUCCESS"]);
           }
@@ -565,11 +552,8 @@
         return;  // TODO fix me
       }
 
-      console.log("New exercise:");
       var possible_exercises = levels[window.current_level].exercises_types;
       var choosen_exercise_id = random_from_list(possible_exercises);
-      console.log(possible_exercises);
-      console.log(choosen_exercise_id);
 
       var exercise = exercises_types[choosen_exercise_id];
 
@@ -581,13 +565,11 @@
       $("div#exercise-info p.exercise-description").text(exercise.description);
 
       var plugin_name = exercise.plugin_name;
-      console.log("Plugin: " + plugin_name);
 
       select_the_text_to_play();
 
       $("div#exercise-board")[plugin_name]();
 
-      console.log(window.current_exercise_type);
     }
 
     function update_progress() {
@@ -603,10 +585,7 @@
       window.experience_points += window.bonus_points;
       window.bonus_points = 0;
 
-      console.log("Ai câștigat " + points_for_this + " punct(e)!");
-
       window.consecutive_successes += 1;
-      console.log("Consecutive +1");
 
       if (window.hint_used) {
         window.consecutive_successes = 0;
@@ -627,6 +606,7 @@
           level_start_at = (window.current_level + 1) * window.points_per_level;
         }
 
+        console.log(window.current_text);
         console.log("Old:" + old_points + " Level start at: " + level_start_at + " Experience points: " + window.experience_points);
         if (old_points < level_start_at && window.experience_points >= level_start_at) {
           window.current_level += 1;
@@ -674,10 +654,6 @@
     $(document).on("exercise_success_event", {
       foo: "bar"
     }, function (event, arg1, arg2) {
-      console.log(event.data.foo); // "bar"
-      console.log(arg1);           // "bim"
-      console.log(arg2);           // "baz"
-      console.log("YEEEY");
 
       var possible_messages = levels[window.current_level].success_messages;
       var choosen_msg_id = random_from_list(possible_messages);
@@ -701,10 +677,6 @@
     $(document).on("exercise_fail_event", {
       foo: "bar"
     }, function (event, arg1, arg2) {
-      console.log(event.data.foo); // "bar"
-      console.log(arg1);           // "bim"
-      console.log(arg2);           // "baz"
-      console.log("FAIL");
       fail();
     });
 
