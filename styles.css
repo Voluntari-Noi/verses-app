@@ -9,6 +9,7 @@
  *
  * #151515
  */
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
 
 body {
   color: #151515;
@@ -22,10 +23,22 @@ div.row {
 div.row.row-header {
   background: #255957;
   color: white;
+  text-align: center;
 }
 
 div.row.row-header h3 {
   margin-bottom: 0;
+  display: inline;
+  position: relative;
+  top: 5px;
+  font-family: 'Gravitas One', cursive;
+}
+
+div.row.row-header img.logo {
+  width: 50px;
+  height: auto;
+  display: inline;
+  margin-right: 10px;
 }
 
 div.row.row-user {
