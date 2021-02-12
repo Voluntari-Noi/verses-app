@@ -176,7 +176,7 @@
     // Definition of levels
     window.levels = {
       1: {
-        'exercises_types': ['ID001'],
+        'exercises_types': ['ID001', 'ID004'],
         'success_messages': ['M001', 'M002'],
         'fail_messages': ['F001'],
         'text_max_length': 100
