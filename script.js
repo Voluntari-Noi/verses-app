@@ -610,10 +610,10 @@
         game_over();
       } else {
         var level_start_at = window.current_level * window.points_per_level;
-        if (experience_points > level_start_at) {
-          // fix possible issue on loading profile:
-          level_start_at = (window.current_level + 1) * window.points_per_level;
-        }
+        //if (experience_points > level_start_at) {
+        //  // fix possible issue on loading profile:
+        //  level_start_at = (window.current_level + 1) * window.points_per_level;
+        //}
 
         console.log(window.current_text);
         console.log("Old:" + old_points + " Level start at: " + level_start_at + " Experience points: " + window.experience_points);
