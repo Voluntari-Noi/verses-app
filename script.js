@@ -149,8 +149,8 @@ $("document").ready(function () {
         'preferences': {
             'exercises_types': ['ID001', 'ID002']
         },
-        'level': 2,
-        'experience_points': 21
+        'level': 1,
+        'experience_points': 0
     }
 
     // Definition of nice messages listed on success
