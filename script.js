@@ -666,7 +666,7 @@ $("document").ready(function () {
         if (!cookieVal) {
             document.cookie = key + "=" + currentValue;
         } else {
-            cookieVal = cookieVal.replace("user_profile_level=", "");
+            cookieVal = cookieVal.replace(key + "=", "");
         }
         return cookieValue;
     }
