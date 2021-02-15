@@ -393,13 +393,13 @@ $("document").ready(function () {
                         var text_tried = $("div.blank-words-left p").text();
                         if (text_tried == text_correct) {
                             $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
-                < !--swal("Felicitări! ", "Ai învățat un verset!", "success"); -->
-                                $(document).trigger("exercise_success_event", ["bim", "baz"]);
-                            // $(".word").css("pointer-events", "none");
+                            //swal("Felicitări! ", "Ai învățat un verset!", "success"); 
+                            $(document).trigger("exercise_success_event", ["bim", "baz"]);
+                            //$(".word").css("pointer-events", "none");
                         } else {
                             if (alerted_fail == false) {
-                  < !--swal("Ai greșit!", "Încearcă din nou.", "error"); -->
-                                    $(document).trigger("exercise_fail_event", ["FAIL"]);
+                                //swal("Ai greșit!", "Încearcă din nou.", "error");
+                                $(document).trigger("exercise_fail_event", ["FAIL"]);
                             }
 
                             setTimeout(function () {
@@ -652,8 +652,8 @@ $("document").ready(function () {
 
     function load_profile() {
         // Load logged in profile
-        //window.experience_points = user_profile.experience_points;
-        //window.current_level = user_profile.level;
+        window.experience_points = user_profile.experience_points;
+        window.current_level = user_profile.level;
 
         var nickname = user_profile.nickname;
         var photo = user_profile.photo;
