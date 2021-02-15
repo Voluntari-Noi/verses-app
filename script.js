@@ -206,21 +206,6 @@
         'text_max_length': 10000
       },
     }
-    if (!document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'))) {
-      $(".user-profile-dialog").removeClass("app-hidden");
-      $(".dp4-confirm-profile-dialog").on("click", function () {
-      $(".user-profile-dialog").addClass("app-hidden");
-        window.user_profile.nickname = $(".dp4-nickname").val();
-        document.cookie = "user_profile_nickname=" + window.user_profile.nickname;
-      });    
-    } else {
-      window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'));
-    }
-
-    function save_to_cookies() {
-      document.cookie = "user_profile_level=" + window.user_profile.level;
-      document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points;
-    }
     
     function clear_board() {
       // Clear the board. Usually when an exercise is done.
@@ -674,6 +659,24 @@
       var photo = user_profile.photo;
 
       $("p#info-nickname span").text(nickname);
+    }
+    function save_to_cookies() {
+      document.cookie = "user_profile_level=" + window.user_profile.level;
+      document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points;
+    }
+    
+    if (!document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'))) {
+      $(".user-profile-dialog").removeClass("app-hidden");
+      $(".dp4-confirm-profile-dialog").on("click", function () {
+      $(".user-profile-dialog").addClass("app-hidden");
+        window.user_profile.nickname = $(".dp4-nickname").val();
+        window.is_logged_in = true;
+        load_profile();
+        document.cookie = "user_profile_nickname=" + window.user_profile.nickname;
+      });    
+    } else {
+      window.is_logged_in = true;
+      window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'));
     }
 
     // OK, let's start.
