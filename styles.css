@@ -5,7 +5,7 @@
  * #255957
  * #eeebd3
  * #a98743
- * #f7c548
+ * #f7c548  #e4aa1a
  *
  * #151515
  */
@@ -67,6 +67,10 @@ div.row.row-footer {
 
 ul#profile-info {
   margin-bottom: 0;
+}
+
+ul#profile-info .fa {
+  color: #e4aa1a;
 }
 
 .word, .blank, .sorting-test-items {
