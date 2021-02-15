@@ -152,7 +152,7 @@
       'level': 2,
       'experience_points': 21
     }
-
+  
     // Definition of nice messages listed on success
     window.success_messages = {
       'M001': 'Bravo!',
@@ -206,7 +206,22 @@
         'text_max_length': 10000
       },
     }
+    if (!document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'))) {
+      $(".user-profile-dialog").removeClass("app-hidden");
+      $(".dp4-confirm-profile-dialog").on("click", function () {
+      $(".user-profile-dialog").addClass("app-hidden");
+        window.user_profile.nickname = $(".dp4-nickname").val();
+        document.cookie = "user_profile_nickname=" + window.user_profile.nickname;
+      });    
+    } else {
+      window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'));
+    }
 
+    function save_to_cookies() {
+      document.cookie = "user_profile_level=" + window.user_profile.level;
+      document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points;
+    }
+    
     function clear_board() {
       // Clear the board. Usually when an exercise is done.
       $("div#exercise-board").html("");
@@ -622,7 +637,7 @@
           new_level();
         }
       }
-
+      save_to_cookies();
       refresh_texts();
     }
 
