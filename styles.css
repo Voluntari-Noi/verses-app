@@ -162,3 +162,16 @@ div.row.row-footer {
 div.hint button {
   margin-top: 5px;
 }
+
+/* Popup Styles*/
+.user-profile-dialog {
+    background-color: rgba(76, 76, 76, 0.7);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.profile-container {
+  background-color: white;
+}
