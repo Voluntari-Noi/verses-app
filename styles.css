@@ -43,6 +43,29 @@ div.row.row-header h3 {
   font-family: 'Parisienne', cursive;
 }
 
+@media screen and (max-width: 400px) {
+  div.row.row-header h3 {
+    font-size: 30px;
+  }
+}
+
+@media screen and (max-width: 330px) {
+  div.row.row-header h3 {
+    top: 2px;
+    font-size: 18px;
+  }
+  div.row.row-header img {
+    width: 30px !important;
+    height: auto !important;
+  }
+}
+
+@media screen and (max-width: 230px) {
+  div.row.row-header img {
+    display: none !important;
+  }
+}
+
 div.row.row-header img.logo {
   width: 50px;
   height: auto;
