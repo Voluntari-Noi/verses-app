@@ -660,6 +660,16 @@
 
       $("p#info-nickname span").text(nickname);
     }
+    function get_or_set_cookie(key, currentValue) {
+      var cookieValue = currentValue;
+      var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
+      if(!cookieVal)
+        document.cookie = key + "=" + currentValue;
+      } else {
+        cookieVal = cookieVal.replace("user_profile_level=","");
+      }
+      return cookieValue;
+    }
     function save_to_cookies() {
       document.cookie = "user_profile_level=" + window.user_profile.level;
       document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points;
@@ -676,7 +686,9 @@
       });    
     } else {
       window.is_logged_in = true;
-      window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'));
+      window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname')).replace("user_profile_nickname=","");
+      window.user_profile.level = get_or_set_cookie("user_profile_level", window.user_profile.level);
+      window.user_profile.experience_points = get_or_set_cookie("user_profile_experience_points", window.user_profile.experience_points);      
     }
 
     // OK, let's start.
