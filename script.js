@@ -680,10 +680,10 @@ $("document").ready(function () {
     function show_user_profile_popup() {
         if($(".dp4-nickname").val().length > 0) {
             $(".dp4-profile-dialog-header span").text("");
-            $(".dp4-confirm-profile-dialog").text("Salvează");
+            $(".dp4-confirm-profile-dialog span").text("Salvează");
         }else{
             $(".dp4-profile-dialog-header span").text("Bun venit! Pentru a începe alege un nickname.");
-            $(".dp4-confirm-profile-dialog").text("Start");
+            $(".dp4-confirm-profile-dialog span").text("Start");
         }
         $(".user-profile-dialog").removeClass("app-hidden");
     }
