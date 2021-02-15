@@ -9,7 +9,7 @@
  *
  * #151515
  */
-@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Parisienne&display=swap');
 
 body {
   color: #151515;
@@ -39,7 +39,8 @@ div.row.row-header h3 {
   display: inline;
   position: relative;
   top: 5px;
-  font-family: 'Gravitas One', cursive;
+  font-size: 40px;
+  font-family: 'Parisienne', cursive;
 }
 
 div.row.row-header img.logo {
