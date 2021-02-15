@@ -163,6 +163,11 @@ div.hint button {
   margin-top: 5px;
 }
 
+button.dp4-confirm-profile-dialog {
+  float: right;
+  margin-bottom: 10px;
+}
+
 /* Popup Styles*/
 .user-profile-dialog {
     background-color: rgba(76, 76, 76, 0.7);

@@ -393,7 +393,7 @@ $("document").ready(function () {
                         var text_tried = $("div.blank-words-left p").text();
                         if (text_tried == text_correct) {
                             $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
-                            //swal("Felicitări! ", "Ai învățat un verset!", "success"); 
+                            //swal("Felicitări! ", "Ai învățat un verset!", "success");
                             $(document).trigger("exercise_success_event", ["bim", "baz"]);
                             //$(".word").css("pointer-events", "none");
                         } else {
@@ -660,7 +660,7 @@ $("document").ready(function () {
 
         $("#info-nickname span").text(nickname);
     }
-    
+
     function get_or_set_cookie(key, currentValue) {
         var result = currentValue;
         var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
@@ -671,23 +671,23 @@ $("document").ready(function () {
         }
         return result;
     }
-    
+
     function save_to_cookies() {
         document.cookie = "user_profile_level=" + window.user_profile.level;
         document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points;
     }
-    
+
     function show_user_profile_popup() {
         if($(".dp4-nickname").val().length > 0) {
             $(".dp4-profile-dialog-header span").text("");
             $(".dp4-confirm-profile-dialog").text("Salvează");
         }else{
-            $(".dp4-profile-dialog-header span").text("Pentru a începe alege un nickname");
+            $(".dp4-profile-dialog-header span").text("Bun venit! Pentru a începe alege un nickname.");
             $(".dp4-confirm-profile-dialog").text("Start");
         }
         $(".user-profile-dialog").removeClass("app-hidden");
     }
-    
+
     if (!document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname'))) {
         show_user_profile_popup();
     } else {
@@ -701,12 +701,12 @@ $("document").ready(function () {
     if (window.is_logged_in) {
         load_profile();
     }
-    
+
     $("#info-nickname span").on("click", function () {
         $(".dp4-nickname").val(window.user_profile.nickname);
-        show_user_profile_popup();    
+        show_user_profile_popup();
     });
-    
+
     $(".dp4-confirm-profile-dialog").on("click", function () {
         $(".user-profile-dialog").addClass("app-hidden");
         window.user_profile.nickname = $(".dp4-nickname").val();
@@ -714,7 +714,7 @@ $("document").ready(function () {
         load_profile();
         document.cookie = "user_profile_nickname=" + window.user_profile.nickname;
     });
-    
+
     $(document).on("exercise_success_event", {
         foo: "bar"
     }, function (event, arg1, arg2) {
