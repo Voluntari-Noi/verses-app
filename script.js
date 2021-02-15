@@ -661,14 +661,14 @@ $("document").ready(function () {
         $("#info-nickname span").text(nickname);
     }
     function get_or_set_cookie(key, currentValue) {
-        var cookieValue = currentValue;
+        var result = currentValue;
         var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
         if (!cookieVal) {
             document.cookie = key + "=" + currentValue;
         } else {
-            cookieVal = cookieVal.replace(key + "=", "");
+            result = cookieVal.replace(key + "=", "");
         }
-        return cookieValue;
+        return result;
     }
     function save_to_cookies() {
         document.cookie = "user_profile_level=" + window.user_profile.level;
