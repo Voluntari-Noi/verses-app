@@ -658,7 +658,7 @@
       var nickname = user_profile.nickname;
       var photo = user_profile.photo;
 
-      $("p#info-nickname span").text(nickname);
+      $("#info-nickname span").text(nickname);
     }
     function get_or_set_cookie(key, currentValue) {
       var cookieValue = currentValue;
