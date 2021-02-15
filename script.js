@@ -663,7 +663,7 @@
     function get_or_set_cookie(key, currentValue) {
       var cookieValue = currentValue;
       var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
-      if(!cookieVal)
+      if(!cookieVal) {
         document.cookie = key + "=" + currentValue;
       } else {
         cookieVal = cookieVal.replace("user_profile_level=","");
