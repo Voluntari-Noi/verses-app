@@ -707,6 +707,10 @@ $("document").ready(function () {
         show_user_profile_popup();
     });
 
+    $('input.dp4-nickname').keyup(function(){
+      $('button.dp4-confirm-profile-dialog').prop('disabled', this.value == "" ? true : false);
+    })
+
     $(".dp4-confirm-profile-dialog").on("click", function () {
         $(".user-profile-dialog").addClass("app-hidden");
         window.user_profile.nickname = $(".dp4-nickname").val();
