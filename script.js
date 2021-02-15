@@ -693,8 +693,8 @@ $("document").ready(function () {
     } else {
         window.is_logged_in = true;
         window.user_profile.nickname = document.cookie.split('; ').find(row => row.startsWith('user_profile_nickname')).replace("user_profile_nickname=", "");
-        window.user_profile.level = get_or_set_cookie("user_profile_level", window.user_profile.level);
-        window.user_profile.experience_points = get_or_set_cookie("user_profile_experience_points", window.user_profile.experience_points);
+        window.user_profile.level = parseInt(get_or_set_cookie("user_profile_level", window.user_profile.level));
+        window.user_profile.experience_points = parseInt(get_or_set_cookie("user_profile_experience_points", window.user_profile.experience_points));
     }
 
     // OK, let's start.
