@@ -1,1 +1,1 @@
- window.texts =["",""];
+ window.texts = ["",""];
