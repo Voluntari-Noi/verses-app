@@ -11,6 +11,8 @@ $("document").ready(function () {
     window.bonus_points = 0;
     window.hint_used = false;
     window.all_books = ['Geneza', 'Exod', 'Levitic', 'Numeri', 'Deuteronom', 'Iosua', 'Judecători', 'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi', '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera', 'Iov', 'Psalmii', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor', 'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel', 'Osea', 'Ioel', 'Amos', 'Obadia', 'Iona', 'Mica', 'Naum', 'Habacuc', 'Țefania', 'Hagai', 'Zaharia', 'Maleahi', 'Matei', 'Marcu', 'Luca', 'Ioan', 'Faptele Apostolilor', 'Romani', '1 Corinteni', '2 Corinteni', 'Galateni', 'Efeseni', 'Filipeni', 'Coloseni', '1 Tesaloniceni', '2 Tesaloniceni', '1 Timotei', '2 Timotei', 'Tit', 'Filimon', 'Evrei', 'Iacov', '1 Petru', '2 Petru', '1 Ioan', '2 Ioan', '3 Ioan', 'Iuda', 'Apocalipsa'];
+    
+    /*
     window.texts = [
         "Cuvântul Tău este o candelă pentru picioarele mele și o lumină pe cărarea mea. (Psalmii 119:105)",
         "Să ascultăm, dar, încheierea tuturor învățăturilor: Teme-te de Dumnezeu și păzește poruncile Lui. Aceasta este datoria oricărui om. (Eclesiastul 12:13)",
@@ -110,7 +112,7 @@ $("document").ready(function () {
         "Voi sunteţi lumina lumii. O cetate aşezată pe un munte nu poate să rămână ascunsă. (Matei 5:14)",
         "Tu ştii tot, Doamne! Adu-Ţi aminte de mine, nu mă uita, răzbună-mă pe prigonitorii mei! Nu mă lua, după îndelunga Ta răbdare. Gândeşte-Te că sufăr ocara din pricina Ta! (Ieremia 15:15)"
     ];
-
+*/
     window.current_text = "aaa";
     window.old_text = "aaa";
 
