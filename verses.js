@@ -738,7 +738,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "El le-a răspuns: „Sunt evreu, şi mă tem de Domnul Dumnezeul cerurilor care a făcut marea şi uscatul!” (Iona 1:9)",
 "Când îmi tânjea sufletul în mine, mi-am adus aminte de Domnul, şi rugăciunea mea a ajuns până la Tine, în Templul Tău cel sfânt. (Iona 2:7)",
 "Cei ce se lipesc de idoli deşerţi îndepărtează îndurarea de la ei. (Iona 2:8)",
-"Eu însă Îţi voi aduce jertfe cu un strigăt de mulţumire, voi împlini juruinţele pe care le-am făcut. Mântuirea vine de la Domnul. (Iona 2:9)"
+"Eu însă Îţi voi aduce jertfe cu un strigăt de mulţumire, voi împlini juruinţele pe care le-am făcut. Mântuirea vine de la Domnul. (Iona 2:9)",
 
 'Am zis: "Ascultaţi, căpetenii ale lui Iacov şi mai mari ai casei lui Israel! Nu este datoria voastră să cunoaşteţi dreptatea? (Mica 3:1)',
 "apoi strigă către Domnul. Dar El nu le răspunde, ci Îşi ascunde faţa de ei în vremea aceea, pentru că au făcut fapte rele. (Mica 3:4)",
@@ -1000,7 +1000,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "Fiindcă plata păcatului este moartea, dar darul fără plată al lui Dumnezeu este viaţa veşnică în Isus Hristos, Domnul nostru. (Romani 6:23)",
 "Acum, dar, nu este nicio osândire pentru cei ce sunt în Hristos Isus, care nu trăiesc după îndemnurile firii pământeşti, ci după îndemnurile Duhului. (Romani 8:1)",
 "Căci - lucru cu neputinţă Legii, întrucât firea pământească o făcea fără putere - Dumnezeu a osândit păcatul în firea pământească, trimiţând, din pricina păcatului, pe însuşi Fiul Său într-o fire asemănătoare cu a păcatului, pentru ca porunca Legii să fie împlinită în noi, care trăim nu după îndemnurile firii pământeşti, ci după îndemnurile Duhului. (Romani 8:3,4)",
-"În adevăr, cei ce trăiesc după îndemnurile firii pământești umblă după lucrurile firii pământești; pe când cei ce trăiesc după îndemnurile Duhului umblă după lucrurile Duhului. (Romani 8:5)", 
+"În adevăr, cei ce trăiesc după îndemnurile firii pământești umblă după lucrurile firii pământești; pe când cei ce trăiesc după îndemnurile Duhului umblă după lucrurile Duhului. (Romani 8:5)",
 "Deci cei ce sunt pământeşti nu pot să placă lui Dumnezeu. (Romani 8:8)",
 "Căci toţi cei ce sunt călăuziţi de Duhul lui Dumnezeu sunt fii ai lui Dumnezeu. (Romani 8:14)",
 "Şi, dacă suntem copii, suntem şi moştenitori: moştenitori ai lui Dumnezeu şi împreună moştenitori cu Hristos, dacă suferim cu adevărat împreună cu El, ca să fim şi proslăviţi împreună cu El. (Romani 8:17)",
