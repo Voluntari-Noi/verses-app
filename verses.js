@@ -662,7 +662,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "Ci cel ce se laudă să se laude că are pricepere şi că Mă cunoaşte, că ştie că Eu sunt Domnul care fac milă, judecată şi dreptate pe pământ! Căci în acestea găsesc plăcere Eu, zice Domnul. (Ieremia 9:24)",
 "Dacă nelegiuirile noastre mărturisesc împotriva noastră, lucrează pentru Numele Tău, Doamne! Căci abaterile noastre sunt multe, am păcătuit împotriva Ta. (Ieremia 14:7)",
 "De ce să fii ca un om încremenit, ca un viteaz care nu ne poate ajuta? Şi totuşi Tu eşti în mijlocul nostru, Doamne, şi Numele Tău este chemat peste noi. De aceea nu ne părăsi! (Ieremia 14:9)",
-'Domnul a răspuns: "Da, vei avea un viitor fericit; da, voi sili pe vrăjmaş să te roage la vreme de nenorocire şi la vreme de necaz! (Ieremia 15:11)',
+'Domnul a răspuns: "Da, vei avea un viitor fericit; da, voi sili pe vrăjmaş să te roage la vreme de nenorocire şi la vreme de necaz!" (Ieremia 15:11)',
 "Tu ştii tot, Doamne! Adu-Ţi aminte de mine, nu mă uita, răzbună-mă pe prigonitorii mei! Nu mă lua, după îndelunga Ta răbdare. Gândeşte-Te că sufăr ocara din pricina Ta! (Ieremia 15:15)",
 'De aceea aşa vorbeşte Domnul: "Dacă te vei lipi iarăşi de Mine, îţi voi răspunde iarăşi, şi vei sta înaintea Mea; dacă vei despărţi ce este de preţ de ce este fără preţ, vei fi ca gura Mea. Ei să se întoarcă la tine, nu tu să te întorci la ei! (Ieremia 15:19)',
 "Te voi face pentru poporul acesta ca un zid tare de aramă; ei se vor război cu tine, dar nu te vor birui; căci Eu voi fi cu tine ca să te scap şi să te izbăvesc, zice Domnul. (Ieremia 15:20)",
