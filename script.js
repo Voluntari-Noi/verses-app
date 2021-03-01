@@ -566,6 +566,7 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
 
         if (window.consecutive_successes % 5 == 0 && window.consecutive_successes > 0) {
             alertify.message("Superb! " + window.consecutive_successes + " exerciții consecutive rezolvate corect din prima.");
+            window.user_profile.experience_points += window.consecutive_successes;
         }
 
         new_exercise();
