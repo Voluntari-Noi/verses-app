@@ -722,7 +722,9 @@ $("document").ready(function () {
         window.user_profile.nickname = $(".dp4-nickname").val();
         window.is_logged_in = true;
         load_profile();
-        document.cookie = "user_profile_nickname=" + window.user_profile.nickname;
+        var cookie_expire = new Date();
+        cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
+        document.cookie = "user_profile_nickname=" + window.user_profile.nickname + ";expires=" + cookie_expire.toUTCString();
     });
 
     $(document).on("exercise_success_event", {
