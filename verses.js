@@ -567,7 +567,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "Veniţi totuşi să ne judecăm, zice Domnul. De vor fi păcatele voastre cum e cârmâzul, se vor face albe ca zăpada; de vor fi roşii ca purpura, se vor face ca lâna. (Isaia 1:18)",
 "De veţi voi şi veţi asculta, veţi mânca cele mai bune roade ale ţării; (Isaia 1:19)",
 "Dar Domnul oştirilor va fi înălţat prin judecată, şi Dumnezeul cel sfânt va fi sfinţit prin dreptate. (Isaia 5:16)",
-'De aceea, Domnul însuşi vă va da un semn: "Iată, fecioara va rămâne însărcinată, va naşte un Fiu şi-I va pune numele Emanuel. (Isaia 7:14)',
+'De aceea, Domnul însuşi vă va da un semn: "Iată, fecioara va rămâne însărcinată, va naşte un Fiu şi-I va pune numele Emanuel." (Isaia 7:14)',
 "Căci un Copil ni S-a născut, un Fiu ni S-a dat, şi domnia va fi pe umărul Lui; Îl vor numi: „Minunat, Sfetnic, Dumnezeu tare, Părintele veşniciilor, Domn al păcii.” (Isaia 9:6)",
 "El va face ca domnia Lui să crească, şi o pace fără sfârşit va da scaunului de domnie al lui David şi împărăţiei lui, o va întări şi o va sprijini prin judecată şi neprihănire, de acum şi-n veci de veci; iată ce va face râvna Domnului oştirilor. (Isaia 9:7)",
 "Nu se va face niciun rău şi nicio pagubă pe tot muntele Meu cel sfânt; căci pământul va fi plin de cunoştinţa Domnului, ca fundul mării de apele care-l acoperă. (Isaia 11:9)",
