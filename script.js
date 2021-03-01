@@ -240,8 +240,8 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
         $("button#some-experience").hide();
         $("button#fail").hide();
         $("div.row.row-footer").hide();
-        $("div.row.row-board").html("<h2>Bravooooo!</h2>");
-        $("div.row.row-board").append("<a href='' class='btn btn-primary'>Începe din nou</a>");
+        $("div.row.row-board").html("<h2>Bravooooo!</h2><p>Ai trecut cu bine toate nivelurile. Sperăm că ai învățat multe versete.</p><p>Te invităm să vizitezi <a href='https://pentrucer.net/'>site-ul nostru</a> și să ne povestești experiența ta cu aplicația de memorat versete folosind <a href='https://pentrucer.net/contact/'>pagina de contact</a>.</p><p>Trimite-ne împreună cu feedback-ul tău codul <b>VA210103</b> și vei avea parte de o surpriză din partea echipei Pentru Cer.</p><p>Fii binecuvântat!</p>");
+        $("div.row.row-board").append("<a href='' class='btn btn-primary'>Continuă să exersezi</a>");
     }
 
     function new_level() {
