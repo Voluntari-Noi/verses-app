@@ -617,7 +617,7 @@ $("document").ready(function () {
             $(".dp4-profile-dialog-header span").text("");
             $(".dp4-confirm-profile-dialog span").text("Salvează");
         }else{
-            $(".dp4-profile-dialog-header span").text("Bun venit! Pentru a începe alege un nickname.");
+            $(".dp4-profile-dialog-header span").text("Bun venit! Pentru a începe, completează-ți numele.");
             $(".dp4-confirm-profile-dialog span").text("Start");
         }
         $(".user-profile-dialog").removeClass("app-hidden");
