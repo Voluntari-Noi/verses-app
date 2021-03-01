@@ -54,6 +54,39 @@ $("document").ready(function () {
         'experience_points': 0
     }
 
+/* TODO: adaptează și adaugă mesajele
+Poți face întodeauna mai mult decât ai crezut.
+Mergi cu încredere mai departe.
+Nimic nu este imposibil pentru cel care încearcă.
+Nu-ți pierde entuziasmul.
+
+Succes:
+Corect!
+Bravo! Continuă!
+Felicitări! Mergi mai departe!
+Fantastic!
+Te-ai descurcat minunat! Hai să facem exercițiile mai dificile!
+Super!
+Excelent!
+Perfect!
+Super!
+Foarte bine!
+Felicitări! Ești acum la nivelul 1
+Acum vei primi conținut de învățare mai dificil !
+Pregătit de o provocare?
+Rezolvă corect 20 de exerciții și vei primi bonus 10 puncte.
+Studiul tău intens dă rezultate!
+
+Minunat! Muncești din greu și înveți cuvinte noi!
+Ești as la acest capitol!
+Ai terminat două lecții fără greșeli. Ești pregătit să atingi nivelul următor!
+
+Devii din ce în ce mai bun!
+Felicitări! Ești acum la nivelul 2
+Acum vei primi conținut de învățare mai dificil
+Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
+*/
+
     // Definition of nice messages listed on success
     window.success_messages = {
         'M001': 'Bravo!',
