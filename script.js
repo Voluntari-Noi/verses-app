@@ -213,7 +213,7 @@ $("document").ready(function () {
 
     function new_level() {
         // New level
-        alertify.message("New level. Yey!");
+        alertify.message("Nivel nou. Felicitări!");
     }
 
     function select_the_text_to_play() {
