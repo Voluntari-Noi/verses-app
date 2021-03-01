@@ -211,4 +211,5 @@ button.dp4-confirm-profile-dialog {
 
 button.press-letter.btn.btn-primary {
     font-family: monospace !important;
+    margin-bottom: 5px;
 }
