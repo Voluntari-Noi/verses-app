@@ -683,7 +683,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "Căci voi răcori sufletul însetat şi voi sătura orice suflet lihnit de foame. (Ieremia 31:25)",
 "Ci iată legământul pe care-l voi face cu casa lui Israel după zilele acelea, zice Domnul: Voi pune Legea Mea înăuntrul lor, o voi scrie în inima lor; şi Eu voi fi Dumnezeul lor, iar ei vor fi poporul Meu. (Ieremia 31:33)",
 "Niciunul nu va mai învăţa pe aproapele sau pe fratele său zicând: „Cunoaşte pe Domnul!”, ci toţi Mă vor cunoaşte, de la cel mai mic până la cel mai mare, zice Domnul; căci le voi ierta nelegiuirea şi nu-Mi voi mai aduce aminte de păcatul lor. (Ieremia 31:34)",
-"Aşa vorbeşte Domnul care a făcut soarele să lumineze ziua, care a rânduit luna şi stelele să lumineze noaptea, care întărâtă marea şi face valurile ei să urle, El, al cărui nume este Domnul oştirilor: (Ieremia 31:35)",
+'Aşa vorbeşte Domnul care a făcut soarele să lumineze ziua, care a rânduit luna şi stelele să lumineze noaptea, care întărâtă marea şi face valurile ei să urle, El, al cărui nume este Domnul oştirilor: "Dacă vor înceta aceste legi dinaintea Mea, zice Domnul, şi neamul lui Israel va înceta pe vecie să mai fie un neam înaintea Mea!" (Ieremia 31:35, 36)',
 "Le voi da o inimă şi o cale, ca să se teamă de Mine totdeauna, spre fericirea lor şi a copiilor lor după ei. (Ieremia 32:39)",
 "Voi încheia cu ei un legământ veşnic că nu Mă voi mai întoarce de la ei, ci le voi face bine şi le voi pune în inimă frica de Mine, ca să nu se depărteze de Mine. (Ieremia 32:40)",
 "Mă voi bucura să le fac bine, îi voi sădi cu adevărat în ţara aceasta, din toată inima şi din tot sufletul Meu. (Ieremia 32:41)",
