@@ -667,7 +667,8 @@ $("document").ready(function () {
         var result = currentValue;
         var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
         if (!cookieVal) {
-            var cookie_expire = new Date().setTime(new Date().getTime() + 180 * 24 * 60 * 60);
+            var cookie_expire = new Date();
+            cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
             document.cookie = key + "=" + currentValue + ";expires=" + cookie_expire.toUTCString();
         } else {
             result = cookieVal.replace(key + "=", "");
@@ -676,7 +677,8 @@ $("document").ready(function () {
     }
 
     function save_to_cookies() {
-        var cookie_expire = new Date().setTime(new Date().getTime() + 180 * 24 * 60 * 60);
+        var cookie_expire = new Date();
+        cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
         document.cookie = "user_profile_level=" + window.user_profile.level + ";expires=" + cookie_expire.toUTCString();
         document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points + ";expires=" + cookie_expire.toUTCString();
     }
