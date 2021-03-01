@@ -449,7 +449,7 @@ window.texts = ["La început, Dumnezeu a făcut cerurile şi pământul. (Geneza
 "Nu opri o binefacere celui ce are nevoie de ea, când poţi s-o faci. (Proverbe 3:27)",
 "Căci Domnul urăşte pe oamenii stricaţi, dar este prieten cu cei fără prihană. (Proverbe 3:32)",
 "Blestemul Domnului este în casa celui rău, dar locuinţa celor neprihăniţi o binecuvântă. (Proverbe 3:33)",
-'el mă învăţa atunci şi-mi zicea: "Păstrează bine în inima ta cuvintele mele, păzeşte învăţăturile mele şi vei trăi! (Proverbe 4:4)',
+'Căci când eram încă fiu la tatăl meu şi fiu gingaş şi singur la mama mea, el mă învăţa atunci şi-mi zicea: "Păstrează bine în inima ta cuvintele mele, păzeşte învăţăturile mele şi vei trăi!" (Proverbe 4:3, 4)',
 "N-o părăsi, şi ea te va păzi; iubeşte-o, şi te va ocroti! (Proverbe 4:6)",
 "Când vei umbla, pasul nu-ţi va fi stânjenit; şi când vei alerga, nu te vei poticni. (Proverbe 4:12)",
 "Ţine învăţătura, n-o lăsa din mână; păstrează-o, căci ea este viaţa ta. (Proverbe 4:13)",
