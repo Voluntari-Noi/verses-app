@@ -662,14 +662,16 @@ $("document").ready(function () {
 
         $("#info-nickname span").text(nickname);
     }
-
+    function get_expire_date() {
+        var cookie_expire = new Date();
+        cookie_expire.setTime(cookie_expire.getTime() + 180 * 24 * 60 * 60 * 1000);
+        return ";expires=" + cookie_expire.toUTCString();
+    }
     function get_or_set_cookie(key, currentValue) {
         var result = currentValue;
         var cookieVal = document.cookie.split('; ').find(row => row.startsWith(key));
-        if (!cookieVal) {
-            var cookie_expire = new Date();
-            cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
-            document.cookie = key + "=" + currentValue + ";expires=" + cookie_expire.toUTCString();
+        if (!cookieVal) {            
+            document.cookie = key + "=" + currentValue + get_expire_date();
         } else {
             result = cookieVal.replace(key + "=", "");
         }
@@ -677,10 +679,8 @@ $("document").ready(function () {
     }
 
     function save_to_cookies() {
-        var cookie_expire = new Date();
-        cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
-        document.cookie = "user_profile_level=" + window.user_profile.level + ";expires=" + cookie_expire.toUTCString();
-        document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points + ";expires=" + cookie_expire.toUTCString();
+        document.cookie = "user_profile_level=" + window.user_profile.level + get_expire_date();
+        document.cookie = "user_profile_experience_points=" + window.user_profile.experience_points +  get_expire_date();
     }
 
     function show_user_profile_popup() {
@@ -722,9 +722,7 @@ $("document").ready(function () {
         window.user_profile.nickname = $(".dp4-nickname").val();
         window.is_logged_in = true;
         load_profile();
-        var cookie_expire = new Date();
-        cookie_expire.setTime(new Date().getTime() + 180 * 24 * 60 * 60);
-        document.cookie = "user_profile_nickname=" + window.user_profile.nickname + ";expires=" + cookie_expire.toUTCString();
+        document.cookie = "user_profile_nickname=" + window.user_profile.nickname +  get_expire_date();
     });
 
     $(document).on("exercise_success_event", {
