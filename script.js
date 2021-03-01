@@ -93,7 +93,7 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
         'M002': 'Uaaaa!',
         'M003': 'Super. Ai rezolvat corect!',
         'M004': 'Se vede mult progres. Frumos!',
-        'M005': 'Sunt mândru de tine. Felicitări!',
+        'M005': 'Suntem mândri de tine. Felicitări!',
         'M006': 'Yeeey! Foarte foarte tare!'
     }
 
@@ -236,11 +236,19 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
 
     function game_over() {
         // You won!
-        alertify.message("Ai terminat jocul. Felicitări!");
+        var today = new Date();
+        var dd = String(today.getDate()).padStart(2, '0');
+        var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+        var yy = today.getFullYear().toString().substr(-2);
+
+        finish_code = "VA" + yy + mm + dd;
+
+        alertify.message("Ai terminat toate nivelurile. Felicitări!");
         $("button#some-experience").hide();
         $("button#fail").hide();
         $("div.row.row-footer").hide();
-        $("div.row.row-board").html("<h2>Bravooooo!</h2><p>Ai trecut cu bine toate nivelurile. Sperăm că ai învățat multe versete.</p><p>Te invităm să vizitezi <a href='https://pentrucer.net/'>site-ul nostru</a> și să ne povestești experiența ta cu aplicația de memorat versete folosind <a href='https://pentrucer.net/contact/'>pagina de contact</a>.</p><p>Trimite-ne împreună cu feedback-ul tău codul <b>VA210103</b> și vei avea parte de o surpriză din partea echipei Pentru Cer.</p><p>Fii binecuvântat!</p>");
+        $("div.row.row-board").html("<h2>Bravooooo!</h2><p>Ai trecut cu bine toate nivelurile. Sperăm că ai învățat multe versete.</p><p>Te invităm să vizitezi <a href='https://pentrucer.net/'>site-ul nostru</a> și să ne povestești experiența ta cu aplicația de memorat versete folosind <a href='https://pentrucer.net/contact/'>pagina de contact</a>.</p><p>Trimite-ne împreună cu feedback-ul tău codul <b>"
+          + finish_code + "</b> și vei avea parte de o surpriză din partea echipei Pentru Cer.</p><p>Fii binecuvântat!</p>");
         $("div.row.row-board").append("<a href='' class='btn btn-primary'>Continuă să exersezi</a>");
     }
 
