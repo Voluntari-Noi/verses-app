@@ -208,3 +208,7 @@ button.dp4-confirm-profile-dialog {
 .popup-container {
   background-color: white;
 }
+
+button.press-letter.btn.btn-primary {
+    font-family: monospace !important;
+}
