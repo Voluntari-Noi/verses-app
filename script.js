@@ -99,19 +99,19 @@ $("document").ready(function () {
             'text_max_length': 150
         },
         3: {
-            'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
+            'exercises_types': ['ID001', 'ID002', 'ID004'],
             'success_messages': ['M003', 'M004', 'M006', 'M007', 'M008', 'M009', 'M010'],
             'fail_messages': ['F003', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 200
         },
         4: {
-            'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
+            'exercises_types': ['ID001', 'ID002', 'ID004'],
             'success_messages': ['M004', 'M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
             'fail_messages': ['F003', 'F004', 'F005', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 300
         },
         5: {
-            'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
+            'exercises_types': ['ID001', 'ID002', 'ID004'],
             'success_messages': ['M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
             'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 350
@@ -234,9 +234,12 @@ $("document").ready(function () {
         alertify.message("Nivel nou. Felicitări!");
     }
 
-    function select_the_text_to_play() {
+    function select_the_text_to_play(custom_max_length) {
         // We try to find a text ok for the current level
         var text_max_length = levels[window.user_profile.level].text_max_length;
+        if (custom_max_length !== undefined) {
+          text_max_length = custom_max_length;
+        }
         var i_tried = 0;
         do {
             do {
@@ -592,7 +595,11 @@ $("document").ready(function () {
 
         var plugin_name = exercise.plugin_name;
 
-        select_the_text_to_play();
+        if (choosen_exercise_id == 'ID003') {
+          select_the_text_to_play(80);
+        } else {
+          select_the_text_to_play();
+        }
 
         $("div#exercise-board")[plugin_name]();
 
