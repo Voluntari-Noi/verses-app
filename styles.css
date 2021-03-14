@@ -93,6 +93,10 @@ div.row.row-footer a {
   color: white;
 }
 
+div.row.row-footer p {
+  margin-bottom: 0px;
+}
+
 ul#profile-info {
   margin-bottom: 0;
 }
