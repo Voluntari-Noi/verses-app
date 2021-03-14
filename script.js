@@ -403,11 +403,28 @@ $("document").ready(function () {
         this.append('<p class="dp4-displayed-verse">' + verse + "</p>");
         $("div.app-templates div.dp4-template").clone().removeClass("app-hidden").appendTo("div#exercise-board")
 
+        function we_should_list_this_book(book, reference) {
+            if (book[0] == reference[0] && book[1] == reference [1] && book[2] == reference[2] && book[3] == reference[3]) {
+                return true;
+            } else {
+                if(more_and_more_probable_by_level_up(window.user_profile.level) &&
+                   more_and_more_probable_by_level_up(window.user_profile.level) &&
+                   more_and_more_probable_by_level_up(window.user_profile.level) &&
+                   more_and_more_probable_by_level_up(window.user_profile.level)) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        }
+
         $.each(window.all_books, function (i, item) {
-            $('div#exercise-board select.dp4-carte').append($('<option>', {
-                value: item,
-                text: item
-            }));
+            if (we_should_list_this_book(item, reference)) {
+                $('div#exercise-board select.dp4-carte').append($('<option>', {
+                    value: item,
+                    text: item
+                }));
+            }
         });
 
         this.append("<button class='dp4-done btn btn-primary'>Verifică</button>");
