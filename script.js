@@ -598,13 +598,6 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
             game_over();
         } else {
             var level_start_at = window.user_profile.level * window.points_per_level;
-            //if (window.user_profile.experience_points > level_start_at) {
-            //  // fix possible issue on loading profile:
-            //  level_start_at = (window.user_profile.level + 1) * window.points_per_level;
-            //}
-
-            console.log(window.current_text);
-            console.log("Old:" + old_points + " Level start at: " + level_start_at + " Experience points: " + window.user_profile.experience_points);
             if (old_points < level_start_at && window.user_profile.experience_points >= level_start_at) {
                 window.user_profile.level += 1;
                 new_level();
