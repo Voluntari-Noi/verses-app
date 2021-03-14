@@ -316,9 +316,45 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
 
             shuffle(text_hidden);
 
+            // this.append("<button class='dp4-done btn btn-primary'>Verifică</button>");
+            // $("button.dp4-done").on("click", function () {
+
             var $HTML_to_display = $("div.text-with-blank");
             $HTML_to_display.find("span").replaceWith(function () { return "<div class='blank'>__________</div>"; });
             $(".blank-words-left").html($HTML_to_display2);
+
+            $("button.dp4-done").remove();
+            $("div.hint").prepend("<button class='dp4-done btn btn-primary'>Verifică</button>");
+            $("button.dp4-done").hide();
+
+            $("button.dp4-done").on("click", function () {
+                var text_tried = $("div.blank-words-left p").text();
+                if (text_tried == text_correct) {
+                    $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
+                    //swal("Felicitări! ", "Ai învățat un verset!", "success");
+                    $("button.dp4-done").remove();
+                    $(document).trigger("exercise_success_event", ["bim", "baz"]);
+                    //$(".word").css("pointer-events", "none");
+                } else {
+                    if (alerted_fail == false) {
+                        //swal("Ai greșit!", "Încearcă din nou.", "error");
+                        $("button.dp4-done").hide();
+                        $(document).trigger("exercise_fail_event", ["FAIL"]);
+                    }
+
+                    setTimeout(function () {
+                        $(".word").appendTo('.blank-words-right');
+                        $(".word").removeClass('dropped');
+
+                        $(".blank").each(function () {
+                            if ($(this).html() == "") {
+                                $(this).text("__________");
+                                $(this).droppable('enable');
+                            }
+                        });
+                    }, 1000);
+                }
+            });
 
             for (var index in text_hidden) {
                 var $new_word = $("<div>").addClass("word").html(text_hidden[index]);
@@ -362,30 +398,9 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
                     });
 
                     if (number_words_to_drop == 0) {
-                        var text_tried = $("div.blank-words-left p").text();
-                        if (text_tried == text_correct) {
-                            $(".blank-words-status").html("<p class='status-succes-text'><b> <i class='fa fa-check'></i></b></p>");
-                            //swal("Felicitări! ", "Ai învățat un verset!", "success");
-                            $(document).trigger("exercise_success_event", ["bim", "baz"]);
-                            //$(".word").css("pointer-events", "none");
-                        } else {
-                            if (alerted_fail == false) {
-                                //swal("Ai greșit!", "Încearcă din nou.", "error");
-                                $(document).trigger("exercise_fail_event", ["FAIL"]);
-                            }
-
-                            setTimeout(function () {
-                                $(".word").appendTo('.blank-words-right');
-                                $(".word").removeClass('dropped');
-
-                                $(".blank").each(function () {
-                                    if ($(this).html() == "") {
-                                        $(this).text("__________");
-                                        $(this).droppable('enable');
-                                    }
-                                });
-                            }, 1000);
-                        }
+                        $("button.dp4-done").show();
+                    } else {
+                        $("button.dp4-done").hide();
                     }
                 }
             });
