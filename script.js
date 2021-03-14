@@ -400,8 +400,17 @@ $("document").ready(function () {
             reference = wholeText.substring(lIndexOfParenthesis).replace("(", "").replace(")", "");
         };
 
+        var text = reference;
+        var verse_number = text.split(":")[1];
+        var first_part = text.split(":")[0];
+        var parts = first_part.split(" ");
+        var chapter = parts[parts.length - 1];
+        var book = first_part.split(" " + chapter)[0];
+        var multiple_verses = verse_number.indexOf("-") !== -1;
+        var is_special_verse = verse_number.indexOf("p") !== -1;
+
         this.append('<p class="dp4-displayed-verse">' + verse + "</p>");
-        $("div.app-templates div.dp4-template").clone().removeClass("app-hidden").appendTo("div#exercise-board")
+        $("div.app-templates div.dp4-template").clone().removeClass("app-hidden").appendTo("div#exercise-board");
 
         function we_should_list_this_book(book, reference) {
             if (book[0] == reference[0] && book[1] == reference [1] && book[2] == reference[2] && book[3] == reference[3]) {
@@ -418,6 +427,13 @@ $("document").ready(function () {
             }
         }
 
+        $('div#exercise-board select.dp4-carte').append($('<option>', {
+            value: "Alege cartea",
+            text: "Alege cartea",
+            disabled: true,
+            selected: true
+        }));
+
         $.each(window.all_books, function (i, item) {
             if (we_should_list_this_book(item, reference)) {
                 $('div#exercise-board select.dp4-carte').append($('<option>', {
@@ -427,6 +443,13 @@ $("document").ready(function () {
             }
         });
 
+        if (is_special_verse || multiple_verses || window.user_profile.level <= 7) {
+            $("input.dp4-versete").val(verse_number);
+        }
+
+        if (window.user_profile.level <= 5) {
+            $("input.dp4-capitol").val(chapter);
+        }
         this.append("<button class='dp4-done btn btn-primary'>Verifică</button>");
 
         $("button.dp4-done").on("click", function () {
