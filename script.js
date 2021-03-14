@@ -56,47 +56,18 @@ $("document").ready(function () {
         'experience_points': 0
     }
 
-/* TODO: adaptează și adaugă mesajele
-Poți face întodeauna mai mult decât ai crezut.
-Mergi cu încredere mai departe.
-Nimic nu este imposibil pentru cel care încearcă.
-Nu-ți pierde entuziasmul.
-
-Succes:
-Corect!
-Bravo! Continuă!
-Felicitări! Mergi mai departe!
-Fantastic!
-Te-ai descurcat minunat! Hai să facem exercițiile mai dificile!
-Super!
-Excelent!
-Perfect!
-Super!
-Foarte bine!
-Felicitări! Ești acum la nivelul 1
-Acum vei primi conținut de învățare mai dificil !
-Pregătit de o provocare?
-Rezolvă corect 20 de exerciții și vei primi bonus 10 puncte.
-Studiul tău intens dă rezultate!
-
-Minunat! Muncești din greu și înveți cuvinte noi!
-Ești as la acest capitol!
-Ai terminat două lecții fără greșeli. Ești pregătit să atingi nivelul următor!
-
-Devii din ce în ce mai bun!
-Felicitări! Ești acum la nivelul 2
-Acum vei primi conținut de învățare mai dificil
-Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
-*/
-
     // Definition of nice messages listed on success
     window.success_messages = {
-        'M001': 'Bravo!',
-        'M002': 'Uaaaa!',
-        'M003': 'Super. Ai rezolvat corect!',
-        'M004': 'Se vede mult progres. Frumos!',
-        'M005': 'Suntem mândri de tine. Felicitări!',
-        'M006': 'Yeeey! Foarte foarte tare!'
+        'M001': 'Corect!',
+        'M002': 'Bravo! Continuă!',
+        'M003': 'Felicitări! Mergi mai departe!',
+        'M004': 'Fantastic!',
+        'M005': 'Super!',
+        'M006': 'Perfect!',
+        'M007': 'Foarte bine!',
+        'M008': 'Minunat! Muncești din greu și înveți versete noi.',
+        'M009': 'Se vede mult progres.',
+        'M010': 'Devii din ce în ce mai bun.',
     }
 
     // Definition of messages to be listed on fail
@@ -106,69 +77,73 @@ Dacă nu exersezi mâine, vei relua seria de la zero. Ai grijă!
         'F003': 'Mai încearcă.',
         'F004': 'Ai greșit...',
         'F005': 'Hmm. Nu chiar.',
-        'F006': 'Of of of'
+        'F006': 'Of of of',
+        'F007': 'Poți face întotdeauna mai mult decât ai crezut.',
+        'F008': 'Mergi cu încredere mai departe.',
+        'F009': 'Nimic nu este imposibil pentru cel care încearcă.',
+        'F010': 'Nu-ți pierde entuziasmul.'
     }
 
     // Definition of levels
     window.levels = {
         1: {
             'exercises_types': ['ID001', 'ID004'],
-            'success_messages': ['M001', 'M002'],
-            'fail_messages': ['F001'],
+            'success_messages': ['M001', 'M002', 'M006', 'M007'],
+            'fail_messages': ['F001', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 100
         },
         2: {
             'exercises_types': ['ID001', 'ID002', 'ID004'],
-            'success_messages': ['M002', 'M003'],
-            'fail_messages': ['F002', 'F003'],
+            'success_messages': ['M002', 'M003', 'M006', 'M007', 'M008'],
+            'fail_messages': ['F002', 'F003', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 150
         },
         3: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M003', 'M004'],
-            'fail_messages': ['F003'],
+            'success_messages': ['M003', 'M004', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F003', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 200
         },
         4: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M004', 'M005'],
-            'fail_messages': ['F003', 'F004', 'F005'],
+            'success_messages': ['M004', 'M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F003', 'F004', 'F005', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 300
         },
         5: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 350
         },
         6: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 400
         },
         7: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 500
         },
         8: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M006', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 600
         },
         9: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 1000
         },
         10: {
             'exercises_types': ['ID001', 'ID002', 'ID003', 'ID004'],
-            'success_messages': ['M005', 'M006'],
-            'fail_messages': ['F006'],
+            'success_messages': ['M005', 'M007', 'M008', 'M009', 'M010'],
+            'fail_messages': ['F006', 'F007', 'F008', 'F009', 'F010'],
             'text_max_length': 10000
         }
     }
