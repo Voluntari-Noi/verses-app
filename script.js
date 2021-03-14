@@ -532,6 +532,8 @@ $("document").ready(function () {
                     if (ok_to_add) {
                         text_definition = text_definition + hidden_word_placeholder;
                         hidden_words.push(element);
+                    } else {
+                        text_definition += element;
                     }
                 } else {
                     text_definition += element;
