@@ -217,3 +217,7 @@ button.press-letter.btn.btn-primary {
     font-family: monospace !important;
     margin-bottom: 5px;
 }
+
+li#info-nickname span {
+  cursor: pointer;
+}
