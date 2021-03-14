@@ -218,6 +218,7 @@ button.press-letter.btn.btn-primary {
     margin-bottom: 5px;
 }
 
-li#info-nickname span {
+li#info-nickname span,
+li#info-reset span {
   cursor: pointer;
 }

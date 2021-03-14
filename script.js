@@ -731,6 +731,14 @@ $("document").ready(function () {
 
     alertify.set('notifier', 'position', 'top-right');
 
+    $("li#info-reset span").on("click", function() {
+        window.user_profile.level = 1;
+        window.current_level = 1;
+        window.user_profile.experience_points = 0;
+        save_to_cookies();
+        refresh_texts();
+    });
+
     start_game();
 
     // These are for testing:
