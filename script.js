@@ -1,4 +1,6 @@
 $("document").ready(function () {
+    $('[data-toggle="tooltip"]').tooltip();
+
     // Init game
     //window.current_level = 1;
     //window.experience_points = 0;
