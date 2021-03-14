@@ -732,11 +732,15 @@ $("document").ready(function () {
     alertify.set('notifier', 'position', 'top-right');
 
     $("li#info-reset span").on("click", function() {
-        window.user_profile.level = 1;
-        window.current_level = 1;
-        window.user_profile.experience_points = 0;
-        save_to_cookies();
-        refresh_texts();
+        if (confirm('Tu chiar vrei să începi de la nivelul 1 din nou? Pierzi tot progresul.')) {
+            window.user_profile.level = 1;
+            window.current_level = 1;
+            window.user_profile.experience_points = 0;
+            save_to_cookies();
+            refresh_texts();
+        } else {
+            alert('Te-ai răzgândit. Poți continua de unde ai rămas.');
+        }
     });
 
     start_game();
