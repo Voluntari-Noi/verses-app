@@ -554,6 +554,9 @@ $("document").ready(function () {
                 var replaced_first = current_hidden_text.replace(hidden_word_placeholder, "<b>" + hidden_words[0] + "</b>");
                 $("p.hidden-text").html(replaced_first);
                 hidden_words.shift();
+
+                window.consecutive_fails = 0;  // Reset fails. The exercise will skip only with 3 consecutive wrong letters.
+
                 if (hidden_words.length == 0) {
                     $(document).trigger("exercise_success_event", ["SUCCESS"]);
                 }
