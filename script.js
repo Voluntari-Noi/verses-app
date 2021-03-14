@@ -519,7 +519,17 @@ $("document").ready(function () {
             split_text.forEach(element => {
                 if (ok_to_hide(element, i_tried) && more_and_more_probable_by_level_up(window.user_profile.level)) {
                     text_definition = text_definition + hidden_word_placeholder;
-                    hidden_words.push(element);
+
+                    ok_to_add = true;
+                    hidden_words.forEach(a_word => {
+                        if (a_word[0] == element[0]) {
+                            ok_to_add = false;
+                        }
+                    });
+
+                    if (ok_to_add) {
+                        hidden_words.push(element);
+                    }
                 } else {
                     text_definition += element;
                 }
