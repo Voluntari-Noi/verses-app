@@ -73,12 +73,18 @@ window.texts = [
 "Ca ploaia să curgă învăţăturile mele, ca roua să cadă cuvântul meu, ca ploaia repede pe verdeaţă, ca picăturile de ploaie pe iarbă! (Deuteronom 32:2)",
 "El este Stânca; lucrările Lui sunt desăvârşite, căci toate căile Lui sunt drepte; El este un Dumnezeu credincios şi fără nedreptate, El este drept şi curat. (Deuteronom 32:4)",
 "Nimeni nu este ca Dumnezeul lui Israel, El trece pe ceruri ca să-ţi vină în ajutor, trece cu măreţie pe nori. (Deuteronom 33:26)",
-"Dumnezeul cel Veşnic este un loc de adăpost, şi sub braţele Lui cele veşnice este un loc de scăpare. El a izgonit pe vrăjmaş dinaintea ta şi a zis: „Nimiceşte-l.” (Deuteronom 33:27)","Orice loc pe care-l va călca talpa piciorului vostru vi-l dau, cum am spus lui Moise. (Iosua 1:3)",
+"Dumnezeul cel Veşnic este un loc de adăpost, şi sub braţele Lui cele veşnice este un loc de scăpare. El a izgonit pe vrăjmaş dinaintea ta şi a zis: „Nimiceşte-l.” (Deuteronom 33:27)",
 
+"Orice loc pe care-l va călca talpa piciorului vostru vi-l dau, cum am spus lui Moise. (Iosua 1:3)",
 "Nimeni nu va putea să stea împotriva ta, cât vei trăi. Eu voi fi cu tine, cum am fost cu Moise; nu te voi lăsa, nici nu te voi părăsi. (Iosua 1:5)",
 "Cartea aceasta a Legii să nu se depărteze de gura ta; cugetă asupra ei zi şi noapte, căutând să faci tot ce este scris în ea; căci atunci vei izbândi în toate lucrările tale şi atunci vei lucra cu înţelepciune. (Iosua 1:8)",
 "Nu ţi-am dat Eu oare porunca aceasta: „Întăreşte-te şi îmbărbătează-te”? Nu te înspăimânta şi nu te îngrozi, căci Domnul Dumnezeul tău este cu tine în tot ce vei face. (Iosua 1:9)",
-'Iosua a zis: "Prin aceasta veţi cunoaşte că Dumnezeul cel Viu este în mijlocul vostru şi că va izgoni dinaintea voastră pe canaaniţi, pe hetiţi, pe heviţi, pe fereziţi, pe ghirgasiţi, pe amoriţi şi pe iebusiţi. (Iosua 3:10)',"Vegheaţi, dar, cu luare aminte asupra sufletelor voastre, ca să iubiţi pe Domnul, Dumnezeul vostru. (Iosua 23:11)",'"Aşa să piară toţi vrăjmaşii Tăi, Doamne! Dar cei ce-L iubesc sunt ca soarele, când se arată în puterea lui." Ţara a avut odihnă patruzeci de ani. (Judecători 5:31)"','Îngerul Domnului i S-a arătat şi i-a zis: "Domnul este cu tine, viteazule!" (Judecători 6:12)',"Domnul să-ţi răsplătească ce ai făcut, şi plata să-ţi fie deplină din partea Domnului Dumnezeului lui Israel sub ale cărui aripi ai venit să te adăposteşti! (Rut 2:12)","Nimeni nu este sfânt ca Domnul; nu este alt Dumnezeu decât Tine; nu este stâncă aşa ca Dumnezeul nostru. (1 Samuel 2:2)",
+'Iosua a zis: "Prin aceasta veţi cunoaşte că Dumnezeul cel Viu este în mijlocul vostru şi că va izgoni dinaintea voastră pe canaaniţi, pe hetiţi, pe heviţi, pe fereziţi, pe ghirgasiţi, pe amoriţi şi pe iebusiţi. (Iosua 3:10)',
+"Vegheaţi, dar, cu luare aminte asupra sufletelor voastre, ca să iubiţi pe Domnul, Dumnezeul vostru. (Iosua 23:11)",
+
+'"Aşa să piară toţi vrăjmaşii Tăi, Doamne! Dar cei ce-L iubesc sunt ca soarele, când se arată în puterea lui." Ţara a avut odihnă patruzeci de ani. (Judecători 5:31)"','Îngerul Domnului i S-a arătat şi i-a zis: "Domnul este cu tine, viteazule!" (Judecători 6:12)',
+
+"Domnul să-ţi răsplătească ce ai făcut, şi plata să-ţi fie deplină din partea Domnului Dumnezeului lui Israel sub ale cărui aripi ai venit să te adăposteşti! (Rut 2:12)","Nimeni nu este sfânt ca Domnul; nu este alt Dumnezeu decât Tine; nu este stâncă aşa ca Dumnezeul nostru. (1 Samuel 2:2)",
 "Nu mai vorbiţi cu atâta îngâmfare, să nu vă mai iasă din gură cuvinte de mândrie; căci Domnul este un Dumnezeu care ştie totul, şi toate faptele sunt cântărite de El. (1 Samuel 2:3)",
 "Domnul omoară şi învie, El coboară în Locuinţa morţilor şi El scoate de acolo. Domnul sărăceşte şi El îmbogăţeşte, El smereşte şi El înalţă, El ridică din pulbere pe cel sărac, ridică din gunoi pe cel lipsit. Ca să-i pună să şadă alături cu cei mari. Şi le dă de moştenire un scaun de domnie îmbrăcat cu slavă; căci ai Domnului sunt stâlpii pământului şi pe ei a aşezat El lumea. (1 Samuel 2:6-8)",
 "El va păzi paşii preaiubiţilor Lui, dar cei răi vor fi nimiciţi în întuneric; căci omul nu va birui prin putere. (1 Samuel 2:9)",
