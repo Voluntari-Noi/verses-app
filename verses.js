@@ -707,7 +707,6 @@ window.texts = [
 "Căci aşa vorbeşte Domnul: „Iată, voi îndrepta spre el pacea ca un râu, şi slava neamurilor, ca un pârâu ieşit din matcă, şi veţi fi alăptaţi, veţi fi purtaţi în braţe şi dezmierdaţi pe genunchi. Cum mângâie pe cineva mama sa, aşa vă voi mângâia Eu; da, veţi fi mângâiaţi în Ierusalim!” Şi când veţi vedea aceste lucruri, inima vi se va bucura, şi oasele voastre vor prinde putere ca iarba. - Domnul îşi va arăta astfel puterea faţă de robii Săi, dar va face pe vrăjmaşii Lui să-I simtă mânia. (Isaia 66:12,13,14)",
 "Cum mângâie pe cineva mama sa, aşa vă voi mângâia Eu; da, veţi fi mângâiaţi în Ierusalim! (Isaia 66:13)",
 
-
 "Ei vor lupta împotriva ta, dar nu te vor birui; căci Eu sunt cu tine ca să te scap, zice Domnul. (Ieremia 1:19)",
 "Întoarceţi-vă, copii răzvrătiţi, şi vă voi ierta abaterile." - "Iată-ne, venim la Tine, căci Tu eşti Domnul Dumnezeul nostru. (Ieremia 3:22)",
 "Ci cel ce se laudă să se laude că are pricepere şi că Mă cunoaşte, că ştie că Eu sunt Domnul care fac milă, judecată şi dreptate pe pământ! Căci în acestea găsesc plăcere Eu, zice Domnul. (Ieremia 9:24)",
@@ -1341,5 +1340,4 @@ window.texts = [
 "Cine este nedrept să fie nedrept şi mai departe; cine este întinat să se întineze şi mai departe; cine este fără prihană să trăiască şi mai departe fără prihană. Şi cine este sfânt să se sfinţească şi mai departe! (Apocalipsa 22:11)",
 "Iată, Eu vin curând; şi răsplata Mea este cu Mine, ca să dau fiecăruia după fapta lui. (Apocalipsa 22:12)",
 "Ferice de cei ce îşi spală hainele, ca să aibă drept la pomul vieţii şi să intre pe porţi în cetate! (Apocalipsa 22:14)",
-
 ];
