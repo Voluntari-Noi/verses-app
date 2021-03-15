@@ -84,7 +84,9 @@ window.texts = [
 
 '"Aşa să piară toţi vrăjmaşii Tăi, Doamne! Dar cei ce-L iubesc sunt ca soarele, când se arată în puterea lui." Ţara a avut odihnă patruzeci de ani. (Judecători 5:31)"','Îngerul Domnului i S-a arătat şi i-a zis: "Domnul este cu tine, viteazule!" (Judecători 6:12)',
 
-"Domnul să-ţi răsplătească ce ai făcut, şi plata să-ţi fie deplină din partea Domnului Dumnezeului lui Israel sub ale cărui aripi ai venit să te adăposteşti! (Rut 2:12)","Nimeni nu este sfânt ca Domnul; nu este alt Dumnezeu decât Tine; nu este stâncă aşa ca Dumnezeul nostru. (1 Samuel 2:2)",
+"Domnul să-ţi răsplătească ce ai făcut, şi plata să-ţi fie deplină din partea Domnului Dumnezeului lui Israel sub ale cărui aripi ai venit să te adăposteşti! (Rut 2:12)",
+
+"Nimeni nu este sfânt ca Domnul; nu este alt Dumnezeu decât Tine; nu este stâncă aşa ca Dumnezeul nostru. (1 Samuel 2:2)",
 "Nu mai vorbiţi cu atâta îngâmfare, să nu vă mai iasă din gură cuvinte de mândrie; căci Domnul este un Dumnezeu care ştie totul, şi toate faptele sunt cântărite de El. (1 Samuel 2:3)",
 "Domnul omoară şi învie, El coboară în Locuinţa morţilor şi El scoate de acolo. Domnul sărăceşte şi El îmbogăţeşte, El smereşte şi El înalţă, El ridică din pulbere pe cel sărac, ridică din gunoi pe cel lipsit. Ca să-i pună să şadă alături cu cei mari. Şi le dă de moştenire un scaun de domnie îmbrăcat cu slavă; căci ai Domnului sunt stâlpii pământului şi pe ei a aşezat El lumea. (1 Samuel 2:6-8)",
 "El va păzi paşii preaiubiţilor Lui, dar cei răi vor fi nimiciţi în întuneric; căci omul nu va birui prin putere. (1 Samuel 2:9)",
@@ -93,18 +95,32 @@ window.texts = [
 "Dacă vă veţi teme de Domnul, dacă-I veţi sluji, dacă veţi asculta de glasul Lui şi dacă nu vă veţi împotrivi cuvântului Domnului, vă veţi alipi de Domnul Dumnezeul vostru, atât voi cât şi împăratul care domneşte peste voi. (1 Samuel 12:14)",
 "Acum mai aşteptaţi aici ca să vedeţi minunea pe care o va face Domnul sub ochii voştri. (1 Samuel 12:16)",
 "Nu vă abateţi de la El; altfel, aţi merge după lucruri de nimic, care n-aduc nici folos, nici izbăvire, pentru că sunt lucruri de nimic. (1 Samuel 12:21)",
-"Domnul nu va părăsi pe poporul Lui, din pricina Numelui Lui celui mare, căci Domnul a hotărât să facă din voi poporul Lui. (1 Samuel 12:22)", 'Samuel a zis: "Îi plac Domnului mai mult arderile de tot şi jertfele decât ascultarea de glasul Domnului? Ascultarea face mai mult decât jertfele, şi păzirea cuvântului Său face mai mult decât grăsimea berbecilor. (1 Samuel 15:22)',
+"Domnul nu va părăsi pe poporul Lui, din pricina Numelui Lui celui mare, căci Domnul a hotărât să facă din voi poporul Lui. (1 Samuel 12:22)",
+'Samuel a zis: "Îi plac Domnului mai mult arderile de tot şi jertfele decât ascultarea de glasul Domnului? Ascultarea face mai mult decât jertfele, şi păzirea cuvântului Său face mai mult decât grăsimea berbecilor. (1 Samuel 15:22)',
 'Şi Domnul a zis lui Samuel: "Nu te uita la înfăţişarea şi înălţimea staturii lui, căci l-am lepădat. Domnul nu Se uită la ce se uită omul; omul se uită la ceea ce izbeşte ochii, dar Domnul Se uită la inimă." (1 Samuel 16:7)',
-'Şi David a întrebat pe Domnul: "Să urmăresc oastea aceasta? O voi ajunge?" Domnul i-a răspuns: "Urmăreşte-o, căci o vei ajunge şi vei izbăvi totul." (1 Samuel 30:8)',"David ajungea tot mai mare, şi Domnul Dumnezeul oştirilor era cu el. (2 Samuel 5:10)",'Şi Dumnezeu a zis: "Fiindcă lucrul acesta îl ceri, fiindcă nu ceri pentru tine nici viaţă lungă, nici bogăţii, nici moartea vrăjmaşilor tăi, ci ceri pricepere, ca să faci dreptate, voi face după cuvântul tău. Îţi voi da o inimă înţeleaptă şi pricepută, aşa cum n-a fost nimeni înaintea ta şi nu se va scula nimeni niciodată ca tine. Mai mult, îţi voi da şi ce n-ai cerut: bogăţii şi slavă, aşa încât în tot timpul vieţii tale nu va fi niciun împărat ca tine. (1 Împărați 3:11-13)',
+'Şi David a întrebat pe Domnul: "Să urmăresc oastea aceasta? O voi ajunge?" Domnul i-a răspuns: "Urmăreşte-o, căci o vei ajunge şi vei izbăvi totul." (1 Samuel 30:8)',
+
+"David ajungea tot mai mare, şi Domnul Dumnezeul oştirilor era cu el. (2 Samuel 5:10)",
+
+'Şi Dumnezeu a zis: "Fiindcă lucrul acesta îl ceri, fiindcă nu ceri pentru tine nici viaţă lungă, nici bogăţii, nici moartea vrăjmaşilor tăi, ci ceri pricepere, ca să faci dreptate, voi face după cuvântul tău. Îţi voi da o inimă înţeleaptă şi pricepută, aşa cum n-a fost nimeni înaintea ta şi nu se va scula nimeni niciodată ca tine. Mai mult, îţi voi da şi ce n-ai cerut: bogăţii şi slavă, aşa încât în tot timpul vieţii tale nu va fi niciun împărat ca tine. (1 Împărați 3:11-13)',
 "Şi dacă vei umbla în căile Mele, păzind legile şi poruncile Mele, cum a făcut David, tatăl tău, îţi voi lungi zilele. (1 Împărați 3:14)",
 "ascultă din ceruri, din locul locuinţei Tale, rugăciunile şi cererile lor: şi fă-le dreptate. (1 Împărați 8:49)",
 "iartă poporului Tău păcatele lui şi toate fărădelegile făcute împotriva Ta; trezeşte mila celor ce-i vor ţine robi, ca să se îndure de ei. (1 Împărați 8:50)",
 "Domnul Dumnezeul nostru să fie cu noi, cum a fost cu părinţii noştri; să nu ne părăsească şi să nu ne lase, ci să ne plece inimile spre El, ca să umblăm în toate căile Lui şi să păzim poruncile Lui, legile Lui şi rânduielile Lui, pe care le-a poruncit părinţilor noştri! (1 Împărați 8:57,58)",
-"Inima voastră să fie în totul a Domnului Dumnezeului nostru, cum este astăzi, ca să urmaţi legile Lui şi să păziţi poruncile Lui. (1 Împărați 8:61)","Dar ştiu când stai jos, când ieşi şi când intri şi când eşti furios împotriva Mea. (2 Împărați 19:27)","Eu îi voi fi Tată, şi el Îmi va fi fiu; şi nu voi îndepărta bunătatea Mea de la el, cum am îndepărtat-o de la cel dinaintea ta. (1 Cronici 17:13)",
+"Inima voastră să fie în totul a Domnului Dumnezeului nostru, cum este astăzi, ca să urmaţi legile Lui şi să păziţi poruncile Lui. (1 Împărați 8:61)",
+
+"Dar ştiu când stai jos, când ieşi şi când intri şi când eşti furios împotriva Mea. (2 Împărați 19:27)",
+
+"Eu îi voi fi Tată, şi el Îmi va fi fiu; şi nu voi îndepărta bunătatea Mea de la el, cum am îndepărtat-o de la cel dinaintea ta. (1 Cronici 17:13)",
 "Îl voi aşeza pentru totdeauna în Casa Mea, şi în Împărăţia Mea scaunul lui de domnie va fi întărit pe vecie. (1 Cronici 17:14)",
-'Şi împăratul David s-a dus şi s-a înfăţişat înaintea Domnului şi a zis: "Cine sunt eu, Doamne Dumnezeule, şi ce este casa mea, de m-ai făcut să ajung unde sunt?" (1 Cronici 17:16)','Doamne, din pricina robului Tău şi după inima Ta, ai făcut aceste lucruri mari şi i le-ai descoperit. (1 Cronici 17:19)","Doamne! Nimeni nu este ca Tine şi nu este alt Dumnezeu afară de Tine, după tot ce am auzit cu urechile noastre. (1 Cronici 17:20)',
+'Şi împăratul David s-a dus şi s-a înfăţişat înaintea Domnului şi a zis: "Cine sunt eu, Doamne Dumnezeule, şi ce este casa mea, de m-ai făcut să ajung unde sunt?" (1 Cronici 17:16)',
+'Doamne, din pricina robului Tău şi după inima Ta, ai făcut aceste lucruri mari şi i le-ai descoperit. (1 Cronici 17:19)",
+"Doamne! Nimeni nu este ca Tine şi nu este alt Dumnezeu afară de Tine, după tot ce am auzit cu urechile noastre. (1 Cronici 17:20)',
 "Acum, Doamne, Tu eşti adevăratul Dumnezeu şi Tu ai vestit harul acesta robului Tău. (1 Cronici 17:26)",
-'Binecuvântă, dar, casa robului Tău, ca să rămână pe vecie înaintea Ta! Căci ce binecuvântezi Tu, Doamne, este binecuvântat pentru veşnicie!" (1 Cronici 17:27)',"Atunci vei propăşi, dacă vei căuta să împlineşti legile şi poruncile pe care le-a dat lui Moise, Domnul pentru Israel. Întăreşte-te şi îmbărbătează-te, nu te teme şi nu te înspăimânta. (1 Cronici 22:13)",'Dumnezeu a zis lui Solomon: "Fiindcă dorinţa aceasta este în inima ta, fiindcă nu ceri nici bogăţii, nici averi, nici slavă, nici moartea vrăjmaşilor tăi, nici chiar o viaţă lungă, ci ceri pentru tine înţelepciune şi pricepere ca să judeci pe poporul Meu, peste care te-am pus să domneşti, înţelepciunea şi priceperea îţi sunt date. Îţi voi da, pe deasupra, bogăţii, averi şi slavă, cum n-a mai avut niciodată niciun împărat înaintea ta şi cum nici nu va mai avea după tine." (2 Cronici 1:11,12)',
+'Binecuvântă, dar, casa robului Tău, ca să rămână pe vecie înaintea Ta! Căci ce binecuvântezi Tu, Doamne, este binecuvântat pentru veşnicie!" (1 Cronici 17:27)',
+"Atunci vei propăşi, dacă vei căuta să împlineşti legile şi poruncile pe care le-a dat lui Moise, Domnul pentru Israel. Întăreşte-te şi îmbărbătează-te, nu te teme şi nu te înspăimânta. (1 Cronici 22:13)",
+
+'Dumnezeu a zis lui Solomon: "Fiindcă dorinţa aceasta este în inima ta, fiindcă nu ceri nici bogăţii, nici averi, nici slavă, nici moartea vrăjmaşilor tăi, nici chiar o viaţă lungă, ci ceri pentru tine înţelepciune şi pricepere ca să judeci pe poporul Meu, peste care te-am pus să domneşti, înţelepciunea şi priceperea îţi sunt date. Îţi voi da, pe deasupra, bogăţii, averi şi slavă, cum n-a mai avut niciodată niciun împărat înaintea ta şi cum nici nu va mai avea după tine." (2 Cronici 1:11,12)',
 "voi, dar, întăriţi-vă şi nu lăsaţi să vă slăbească mâinile, căci faptele voastre vor avea o răsplată. (2 Cronici 15:7)",
 "Şi Iahaziel a zis: „Ascultaţi, tot Iuda şi locuitorii din Ierusalim, şi tu, împărate Iosafat! Aşa vă vorbeşte Domnul: „Nu vă temeţi şi nu vă înspăimântaţi dinaintea acestei mari mulţumi, căci nu voi veţi lupta, ci Dumnezeu.”” (2 Cronici 20:15)",
 '"Întăriţi-vă şi îmbărbătaţi-vă. Nu vă temeţi şi nu vă înspăimântaţi înaintea împăratului Asiriei şi înaintea întregii mulţimi care este cu el; căci cu noi sunt mai mulţi decât cu el. Cu el este un braţ de carne, dar cu noi este Domnul Dumnezeul nostru care ne va ajuta şi va lupta pentru noi.” Poporul a avut încredere în cuvintele lui Ezechia, împăratul lui Iuda. " (2 Cronici 32:7,8)',
