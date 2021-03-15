@@ -52,8 +52,11 @@ window.texts = [
 "Îmi voi aşeza Locaşul Meu în mijlocul vostru, şi sufletul Meu nu vă va urî. (Levitic 26:11)",
 "Voi umbla în mijlocul vostru; Eu voi fi Dumnezeul vostru, şi voi veţi fi poporul Meu. (Levitic 26:12)",
 "Eu sunt Domnul Dumnezeul vostru care v-am scos din ţara Egiptului, care v-am scos din robie; Eu am rupt legăturile jugului vostru şi v-am făcut să mergeţi cu capul ridicat. (Levitic 26:13)", "Domnul să te binecuvânteze şi să te păzească! Domnul să facă să lumineze faţa Lui peste tine şi să Se îndure de tine! Domnul să-Şi înalţe faţa peste tine şi să-ţi dea pacea! (Numeri 6:24-26)",
+
 'Domnul a răspuns lui Moise: "Nu cumva s-a scurtat oare mâna Domnului? Vei vedea acum dacă ceea ce ţi-am spus se va întâmpla sau nu." (Numeri 11:23)',
-"Dumnezeu nu este un om ca să mintă, nici un fiu al omului, ca să-I pară rău. Ce a spus, oare nu va face? Ce a făgăduit, oare nu va împlini? (Numeri 23:19)", "Iată că Domnul Dumnezeul tău îţi pune ţara înainte; suie-te, ia-o în stăpânire, cum ţi-a spus Domnul Dumnezeul părinţilor tăi; nu te teme şi nu te înspăimânta. (Deuteronom 1:21)",
+"Dumnezeu nu este un om ca să mintă, nici un fiu al omului, ca să-I pară rău. Ce a spus, oare nu va face? Ce a făgăduit, oare nu va împlini? (Numeri 23:19)",
+
+"Iată că Domnul Dumnezeul tău îţi pune ţara înainte; suie-te, ia-o în stăpânire, cum ţi-a spus Domnul Dumnezeul părinţilor tăi; nu te teme şi nu te înspăimânta. (Deuteronom 1:21)",
 "Domnul Dumnezeul vostru care merge înaintea voastră, Se va lupta El însuşi pentru voi, potrivit cu tot ce a făcut pentru voi sub ochii voştri în Egipt. (Deuteronom 1:30)",
 "Căci Domnul Dumnezeul tău te-a binecuvântat în tot lucrul mâinilor tale şi ţi-a cunoscut călătoria în acest mare pustiu. Iată, de patruzeci de ani de când Domnul Dumnezeul tău este cu tine, şi n-ai dus lipsă de nimic. (Deuteronom 2:7)",
 "Nu te teme de ei; căci Domnul Dumnezeul vostru va lupta El însuși pentru voi. (Deuteronom 3:22)",
