@@ -671,8 +671,10 @@ $("document").ready(function () {
         alertify.error(message);
 
         if (window.consecutive_fails >= 3) {
-            new_exercise();
-            refresh_texts();
+            $("div.hint p.text-hint").show();
+            $("div.hint button").hide();
+            window.hint_used = true;
+            $("div.next-exercise button").show();
         }
     }
 
