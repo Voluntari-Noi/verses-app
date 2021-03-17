@@ -589,6 +589,7 @@ $("document").ready(function () {
         $("div.hint p").hide();
         $("div.hint button").show();
         window.hint_used = false;
+        $("button.dp4-done").remove();
 
         if (window.user_profile.level === 0) {
             return;  // TODO fix me
