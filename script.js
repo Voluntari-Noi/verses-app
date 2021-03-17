@@ -53,7 +53,7 @@ $("document").ready(function () {
         'ID004': {
             'plugin_name': 'fill_by_first_letter',
             'title': 'Prima literă',
-            'description': 'Introdu textul apăsând prima literă a fiecărui cuvânt în ordine:',
+            'description': 'Completează cuvintele lipsă din text apăsând prima literă a fiecăruia, în ordine:',
             'points': 4
         }
     }
@@ -747,7 +747,7 @@ $("document").ready(function () {
     $('input.dp4-nickname').keyup(function(){
       $('button.dp4-confirm-profile-dialog').prop('disabled', this.value == "" ? true : false);
     });
-    
+
     $(".user-profile-dialog").click(function(event) {
         if ( event.target !== event.currentTarget ){
             return;
