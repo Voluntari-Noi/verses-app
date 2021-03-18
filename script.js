@@ -428,8 +428,8 @@ $("document").ready(function () {
         this.append('<p class="dp4-displayed-verse">' + verse + "</p>");
         $("div.app-templates div.dp4-template").clone().removeClass("app-hidden").appendTo("div#exercise-board");
 
-        function we_should_list_this_book(book, reference) {
-            if (book[0] == reference[0] && book[1] == reference [1] && book[2] == reference[2] && book[3] == reference[3]) {
+        function we_should_list_this_book(book, correct_book) {
+            if (book == correct_book) {
                 return true;
             } else {
                 if(more_and_more_probable_by_level_up(window.user_profile.level) &&
@@ -451,7 +451,7 @@ $("document").ready(function () {
         }));
 
         $.each(window.all_books, function (i, item) {
-            if (we_should_list_this_book(item, reference)) {
+            if (we_should_list_this_book(item, book)) {
                 $('div#exercise-board select.dp4-carte').append($('<option>', {
                     value: item,
                     text: item
