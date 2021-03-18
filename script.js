@@ -15,7 +15,7 @@ $("document").ready(function () {
     window.all_books = [
       'Geneza', 'Exodul', 'Levitic',
       'Numeri', 'Deuteronom', 'Iosua', 'Judecători',
-      'Rut', '1 Samuel', '2 Samuel', '1 Împăraţi', '2 Împăraţi',
+      'Rut', '1 Samuel', '2 Samuel', '1 Împărați', '2 Împărați',
       '1 Cronici', '2 Cronici', 'Ezra', 'Neemia', 'Estera',
       'Iov', 'Psalmii', 'Proverbe', 'Eclesiastul', 'Cântarea cântărilor',
       'Isaia', 'Ieremia', 'Plângerile lui Ieremia', 'Ezechiel', 'Daniel',
