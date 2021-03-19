@@ -459,6 +459,9 @@ $("document").ready(function () {
             }
         });
 
+        $("input.dp4-versete").val("");
+        $("input.dp4-capitol").val("");
+
         if (is_special_verse || multiple_verses || window.user_profile.level <= 7) {
             $("input.dp4-versete").val(verse_number);
         }
