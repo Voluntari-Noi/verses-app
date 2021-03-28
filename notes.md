@@ -8,6 +8,7 @@ Replace GA Placeholder with GA script
 
 TODO: On deploy add Google Analytics script (make sure latest version is used). Replace GA Placeholder.
 
+```
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172115546-1"></script>
 <script>
@@ -16,6 +17,8 @@ TODO: On deploy add Google Analytics script (make sure latest version is used). 
   gtag('js', new Date());
   gtag( 'config', 'UA-172115546-1' );
 </script>
+```
+
 FTP connect with FileZilla
 
 Delete existing contents of versete-de-memorat folder on server.
