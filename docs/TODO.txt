@@ -1,0 +1,3 @@
+* Welcome screen: add instructions and more info before asking for user's name. 
+* Share buttons (maybe at the bottom), for easily share the link
+* Share progress (when a level is finished, you can share the progress with your friends as whatsaap status, instagram story, tweet, etc).
